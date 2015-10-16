@@ -1,5 +1,5 @@
-@mixin avatar--mobile($width) {
-  @include mobile {
+@mixin avatar--portrait($width) {
+  @include portrait {
     flex-direction: column;
 
     &__image {

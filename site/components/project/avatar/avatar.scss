@@ -11,5 +11,5 @@
     @include avatar__text;
   }
 
-  @include avatar--mobile($lem * 3);
+  @include avatar--portrait($lem * 3);
 }

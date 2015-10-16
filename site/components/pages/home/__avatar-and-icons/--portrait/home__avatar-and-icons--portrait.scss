@@ -1,5 +1,5 @@
-@mixin home__avatar-and-icons--mobile {
-  @include mobile {
+@mixin home__avatar-and-icons--portrait {
+  @include portrait {
     flex-direction: column;
 
     .avatar {
