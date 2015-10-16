@@ -1,0 +1,74 @@
+
+
+// Fonts
+//
+// Typefaces and fonts used across the site.
+// They are never used directly but set up properly with the `text-style` mixin.
+//
+// Styleguide fonts
+
+
+// Montserrat
+// - The default typeface, sans-serif
+// - character set: Latin
+// - served from Google
+// - styles and weights: Normal, Bold, 
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700,);
+
+
+// Lekton
+// - The secondary typeface, sans-serif
+// - character set: Latin
+// - served from Google
+// - styles and weights: Bold, 
+
+@import url(http://fonts.googleapis.com/css?family=Lekton:700,);
+
+
+
+
+// The font mixin
+@mixin font($variant) {
+
+  @if ($variant == 'montserrat-normal') {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @if ($variant == 'montserrat-bold') {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+  }
+  
+  @if ($variant == 'lekton-bold') {
+    font-family: 'Lekton', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+  }
+  
+}
+
+
+// Font classes
+
+.montserrat-normal {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.lekton-bold {
+  font-family: 'Lekton', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+}
+

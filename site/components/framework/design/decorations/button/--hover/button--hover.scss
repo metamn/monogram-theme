@@ -1,0 +1,10 @@
+@mixin button--hover($color-scheme-hover) {
+  &:hover,
+  &:active {
+    @include colors($color-scheme-hover);
+
+    .link {
+      @include link($color-scheme-hover);
+    }
+  }
+}

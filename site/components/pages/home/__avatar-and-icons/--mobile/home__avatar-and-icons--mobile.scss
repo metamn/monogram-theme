@@ -1,0 +1,10 @@
+@mixin home__avatar-and-icons--mobile {
+  @include mobile {
+    flex-direction: column;
+
+    .avatar {
+      margin-bottom: $lem;
+      margin-right: 0;
+    }
+  }
+}

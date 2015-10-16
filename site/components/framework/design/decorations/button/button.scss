@@ -1,0 +1,16 @@
+@mixin button($color-scheme: black-on-white, $color-scheme-hover: white-on-black) {
+  @include colors($color-scheme);
+  @include text-style(navigation);
+  @include button--hover($color-scheme-hover);
+
+  border: 1px solid;
+  padding: $lem / 4 $lem / 2;
+
+  .link {
+    @include link($color-scheme);
+  }
+
+  + .button {
+    margin-left: $lem;
+  }
+}

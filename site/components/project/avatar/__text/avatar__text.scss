@@ -1,0 +1,12 @@
+@mixin avatar__text {
+  @include colors(plum-on-transparent);
+
+  .name {
+    display: flex;
+    @include text-style(title);
+  }
+
+  .role {
+    @include text-style(subtitle);
+  }
+}

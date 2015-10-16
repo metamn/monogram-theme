@@ -1,0 +1,11 @@
+@mixin border--thin($position: bottom) {
+  $border-thin: $lem / 8 solid;
+  
+  @if ($position == top) {
+    border-top: $border-thin;
+  }
+
+  @if ($position == bottom) {
+    border-bottom: $border-thin;
+  }
+}

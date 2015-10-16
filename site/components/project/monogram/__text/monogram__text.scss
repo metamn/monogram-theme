@@ -1,0 +1,7 @@
+@mixin monogram__text {
+  .title {
+    width: 100vw;
+    height: 100vh;
+    @include text-clipping-mask(white-on-black, darken);
+  }
+}

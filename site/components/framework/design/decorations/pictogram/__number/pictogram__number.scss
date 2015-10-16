@@ -1,0 +1,5 @@
+@mixin pictogram__number {
+  .number {
+    @include text-style(large);
+  }
+}

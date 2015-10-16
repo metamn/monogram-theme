@@ -1,0 +1,301 @@
+
+
+// Text style
+//
+// Typographic settings for different text types.
+// Each text type has set a `font`, a `scale`, a `color` and parameters like letter-spacing, max-width or else.
+// Everything text uses this `text-style` mixin. We don't set `color` or `font` directly for a text.
+//
+// Styleguide text-style
+
+// The width of a text block
+
+
+
+
+// The text mixin
+@mixin text-style($variant) {
+  
+  // Default
+  // - The basic settings for a text.
+  @if ($variant == 'default') {
+    @include font(montserrat-normal);
+    @include scale(default);
+    @include colors(palegreen-on-black);
+    
+    
+    
+  }
+  
+  // Title
+  // - The avatar title
+  @if ($variant == 'title') {
+    @include font(montserrat-bold);
+    @include uppercase(1.1px);
+    
+    
+    
+  }
+  
+  // Subtitle
+  // - The avatar role
+  @if ($variant == 'subtitle') {
+    @include font(lekton-bold);
+    
+    
+    
+  }
+  
+  // Character S
+  // - The background character size, for long text
+  @if ($variant == 'character-s') {
+    @include font(montserrat-bold);
+    @include uppercase(1.1px);
+    @include scale(large-3);
+    
+    
+    
+    @include tablet {
+      @include scale(large-5);
+      
+      
+    }
+    
+    @include laptop {
+      @include scale(large-6);
+      
+      
+    }
+    
+    @include desktop {
+      @include scale(large-7);
+      
+      
+    }
+    
+  }
+  
+  // Character M
+  // - The background character, for medium length text
+  @if ($variant == 'character-m') {
+    @include font(montserrat-bold);
+    @include uppercase(1.1px);
+    @include scale(large-4);
+    
+    
+    
+    @include tablet {
+      @include scale(large-6);
+      
+      
+    }
+    
+    @include laptop {
+      @include scale(large-7);
+      
+      
+    }
+    
+    @include desktop {
+      @include scale(large-8);
+      
+      
+    }
+    
+  }
+  
+  // Character L
+  // - The background character, for short text
+  @if ($variant == 'character-l') {
+    @include font(montserrat-bold);
+    @include uppercase(1.1px);
+    @include scale(large-6);
+    
+    
+    
+    @include tablet {
+      @include scale(large-8);
+      
+      
+    }
+    
+    @include laptop {
+      @include scale(large-9);
+      
+      
+    }
+    
+    @include desktop {
+      @include scale(large-10);
+      
+      
+    }
+    
+  }
+  
+  // Character XL
+  // - The background character, for small length text
+  @if ($variant == 'character-xl') {
+    @include font(montserrat-bold);
+    @include uppercase(1.1px);
+    @include scale(large-8);
+    
+    
+    
+    @include tablet {
+      @include scale(large-10);
+      
+      
+    }
+    
+    @include laptop {
+      @include scale(large-11);
+      
+      
+    }
+    
+    @include desktop {
+      @include scale(large-12);
+      
+      
+    }
+    
+  }
+  
+}
+
+
+// Text style classes
+
+.text-style--default {
+  @include font(montserrat-normal);
+  @include scale(default);
+  @include colors(palegreen-on-black);
+  
+  
+  
+}
+
+.text-style--title {
+  @include font(montserrat-bold);
+  @include uppercase(1.1px);
+  
+  
+  
+}
+
+.text-style--subtitle {
+  @include font(lekton-bold);
+  
+  
+  
+}
+
+.text-style--character-s {
+  @include font(montserrat-bold);
+  @include uppercase(1.1px);
+  @include scale(large-3);
+  
+  
+  
+  @include tablet {
+    @include scale(large-5);
+    
+    
+  }
+  
+  @include laptop {
+    @include scale(large-6);
+    
+    
+  }
+  
+  @include desktop {
+    @include scale(large-7);
+    
+    
+  }
+  
+}
+
+.text-style--character-m {
+  @include font(montserrat-bold);
+  @include uppercase(1.1px);
+  @include scale(large-4);
+  
+  
+  
+  @include tablet {
+    @include scale(large-6);
+    
+    
+  }
+  
+  @include laptop {
+    @include scale(large-7);
+    
+    
+  }
+  
+  @include desktop {
+    @include scale(large-8);
+    
+    
+  }
+  
+}
+
+.text-style--character-l {
+  @include font(montserrat-bold);
+  @include uppercase(1.1px);
+  @include scale(large-6);
+  
+  
+  
+  @include tablet {
+    @include scale(large-8);
+    
+    
+  }
+  
+  @include laptop {
+    @include scale(large-9);
+    
+    
+  }
+  
+  @include desktop {
+    @include scale(large-10);
+    
+    
+  }
+  
+}
+
+.text-style--character-xl {
+  @include font(montserrat-bold);
+  @include uppercase(1.1px);
+  @include scale(large-8);
+  
+  
+  
+  @include tablet {
+    @include scale(large-10);
+    
+    
+  }
+  
+  @include laptop {
+    @include scale(large-11);
+    
+    
+  }
+  
+  @include desktop {
+    @include scale(large-12);
+    
+    
+  }
+  
+}
+

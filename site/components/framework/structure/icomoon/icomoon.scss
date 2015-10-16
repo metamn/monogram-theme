@@ -1,0 +1,18 @@
+@mixin icomoon($size: $lem, $color-scheme: blue-on-black) {
+  display: flex;
+  width: $size;
+  height: $size;
+
+  &__icon {
+    display: flex;
+    width: $size;
+  	height: $size;
+  	fill: currentColor;
+
+    @include colors($color-scheme);
+  }
+
+  &__link {
+    @include link($color-scheme);
+  }
+}

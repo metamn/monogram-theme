@@ -1,0 +1,15 @@
+// Background image
+//
+// Sets a responsive background image for an element using data from the `figure` mixin.
+// With Javascript the breakpoints and the associated images are read and displayed here.
+//
+// Styleguide background-image.
+@mixin background-image($color: $black) {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: $color;
+
+  //background-image is set by JS
+}

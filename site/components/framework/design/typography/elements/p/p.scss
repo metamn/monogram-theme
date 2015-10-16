@@ -1,0 +1,14 @@
+// Paragraph
+//
+// Paragraphs. Consecutive paragraphs are separated by an empty line for better readability.
+//
+// Styleguide p
+@mixin p {
+  p {
+    word-wrap: break-word;  
+  }
+
+  p + p {
+    margin-top: $lem;
+  }
+}

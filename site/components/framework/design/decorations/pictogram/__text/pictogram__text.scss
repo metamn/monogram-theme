@@ -1,0 +1,11 @@
+@mixin pictogram__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: $lem / 4;
+
+  .text {
+    @include text-style(small);
+  }
+}

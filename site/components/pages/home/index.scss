@@ -1,0 +1,19 @@
+html {
+  &.home {
+    body {
+      display: flex;
+      align-items: flex-end;
+
+      width: 100vw;
+      height: 100vh;
+
+      .monogram {
+        @include monogram;
+      }
+
+      .home__avatar-and-icons {
+        @include home__avatar-and-icons;
+      }
+    }
+  }
+}

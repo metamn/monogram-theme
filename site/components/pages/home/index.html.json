@@ -1,0 +1,176 @@
+{
+  "title": "Home",
+  "images": [
+    {
+      "title": "OneShopStop full vivid colors",
+      "name": "cliptext-newwave",
+      "extension": ".jpg"
+    }
+  ],
+  "avatars": [
+    {
+      "name": "Same Fernandez",
+      "role": "Front-end developer",
+      "image": "same-fernandez.jpg"
+    },
+    {
+      "name": "David Hannemaier Hanson",
+      "role": "Ruby on Rails, Basecamp",
+      "image": "dhh.jpg"
+    },
+    {
+      "name": "Li Yu",
+      "role": "UI/UX Designer and developer",
+      "image": "li-yu.jpg"
+    },
+    {
+      "name": "Josh Wink",
+      "role": "DJ & Producer",
+      "image": "josh-wink.jpg"
+    }
+  ],
+  "icons": [
+    {
+      "name": "envelope",
+      "title": "Email",
+      "url": "mailto:"
+    },
+    {
+      "name": "github",
+      "title": "Github",
+      "url": "http://github.com"
+    },
+    {
+      "name": "twitter",
+      "title": "Twitter",
+      "url": "http://twitter.com"
+    },
+    {
+      "name": "medium",
+      "title": "Medium",
+      "url": "http://medium.com"
+    }
+  ],
+  "iconsall": [
+    {
+      "name": "envelope",
+      "title": "Email",
+      "url": "mailto:"
+    },
+    {
+      "name": "github",
+      "title": "Github",
+      "url": "http://github.com"
+    },
+    {
+      "name": "twitter",
+      "title": "Twitter",
+      "url": "http://twitter.com"
+    },
+    {
+      "name": "instagram",
+      "title": "Instagram",
+      "url": "http://instagram.com"
+    },
+    {
+      "name": "facebook-official",
+      "title": "Facebook",
+      "url": "http://facebook.com"
+    },
+    {
+      "name": "lanyrd",
+      "title": "Lanyrd",
+      "url": "http://lanyrd.com"
+    },
+    {
+      "name": "linkedin",
+      "title": "Linkedin",
+      "url": "http://linkedin.com"
+    },
+    {
+      "name": "codepen",
+      "title": "Codepen",
+      "url": "http://codepen.io"
+    },
+    {
+      "name": "dribbble",
+      "title": "Dribbble",
+      "url": "http://dribbble.com"
+    },
+    {
+      "name": "flickr",
+      "title": "Flickr",
+      "url": "http://flickr.com"
+    },
+    {
+      "name": "angellist",
+      "title": "Angel List",
+      "url": "http://angel.co"
+    },
+    {
+      "name": "google-plus",
+      "title": "Google Plus",
+      "url": "http://plus.google.com"
+    },
+    {
+      "name": "skype",
+      "title": "Skype",
+      "url": "http://skype.com"
+    },
+    {
+      "name": "youtube",
+      "title": "Youtube",
+      "url": "http://youtube.com"
+    },
+    {
+      "name": "lastfm",
+      "title": "Last FM",
+      "url": "http://last.fm"
+    },
+    {
+      "name": "stack-overflow",
+      "title": "Stack Overflow",
+      "url": "http://stackoverflow.com"
+    },
+    {
+      "name": "xing",
+      "title": "Xing",
+      "url": "http://xing.com"
+    },
+    {
+      "name": "bitbucket",
+      "title": "Bitbucket",
+      "url": "http://bitbucket.com"
+    },
+    {
+      "name": "medium",
+      "title": "Medium",
+      "url": "http://medium.com"
+    },
+    {
+      "name": "vimeo",
+      "title": "Vimeo",
+      "url": "http://vimeo.com"
+    },
+    {
+      "name": "pinterest",
+      "title": "Pinterest",
+      "url": "http://pinterest.com"
+    },
+    {
+      "name": "spotify",
+      "title": "Spotify",
+      "url": "http://spotify.com"
+    },
+    {
+      "name": "soundcloud",
+      "title": "Soundcloud",
+      "url": "http://soundcloud.com"
+    },
+    {
+      "name": "behance",
+      "title": "Behance",
+      "url": "http://behance.com"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+// Figure
+//
+// Displaying images in a responsive and retina friendly way
+// using the [Picturefill library](http://scottjehl.github.io/picturefill/).
+//
+// Styleguide figure
+@mixin figure($figcaption: off, $stretch: fluid, $loading: true, $placeholder: false) {
+  .figcaption {
+    @include figure__figcaption($figcaption);
+  }
+
+  .img {
+    @include img($stretch, $loading, $placeholder);
+  }
+
+  @if ($stretch == stretched) {
+    width: 100%;
+  }
+
+  @if ($loading == true) {
+    @include figure--loading;
+  }
+}

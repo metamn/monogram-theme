@@ -1,0 +1,42 @@
+{
+  "fonts": [
+    {
+      "name": "Montserrat",
+      "description": "The default typeface",
+      "family": "sans-serif",
+      "character_set": "Latin",
+      "served_from": "Google",
+      "google_font_id": "Montserrat",
+      "styles": [
+        {
+          "name": "Normal",
+          "weight": "400",
+          "style": "normal",
+          "id": "400"
+        },
+        {
+          "name": "Bold",
+          "weight": "700",
+          "style": "bold",
+          "id": "700"
+        }
+      ]
+    },
+    {
+      "name": "Lekton",
+      "description": "The secondary typeface",
+      "family": "sans-serif",
+      "character_set": "Latin",
+      "served_from": "Google",
+      "google_font_id": "Lekton",
+      "styles": [
+        {
+          "name": "Bold",
+          "weight": "700",
+          "style": "bold",
+          "id": "700"
+        }
+      ]
+    }
+  ]
+}

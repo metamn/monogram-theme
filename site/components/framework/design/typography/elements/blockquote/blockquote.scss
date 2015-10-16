@@ -1,0 +1,14 @@
+@mixin blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+
+  display: flex;
+
+  &:before {
+    content: "\201C";
+    display: flex;
+    font-size: 600%;
+    line-height: .6;
+    margin-right: $lem / 4;
+    color: $lightblue;
+  }
+}

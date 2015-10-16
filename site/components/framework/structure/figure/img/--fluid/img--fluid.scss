@@ -1,0 +1,5 @@
+// Fluid images, both vertically and horizontally. Works well with the intrinsic ratio mixin
+@mixin img--fluid {
+  max-width: 100%;
+  max-height: 100%;
+}

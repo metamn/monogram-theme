@@ -1,0 +1,83 @@
+// Colors
+//
+// The colors together with the color pairs.
+// Colors don't exist alone yet in pairs, like black on white.
+// All color pairs have a contrast ratio set for perfect readability using [Lea Verou's contrast checking tool](http://leaverou.github.io/contrast-ratio/).
+//
+// Styleguide colors
+
+// Main color
+$plum: #dda0dd;
+
+// Main color
+$black: #000;
+
+// Main color
+$white: #fff;
+
+// main color
+$palegreen: #98fb98;
+
+
+// Color combinations. Colors are not used standalone but in pairs
+@mixin colors($name) {
+
+  @if ($name == 'white-on-black') {
+    color: $white;
+    background-color: $black;
+    
+  }
+
+  @if ($name == 'palegreen-on-black') {
+    color: $palegreen;
+    background-color: $black;
+    
+  }
+
+  @if ($name == 'plum-on-transparent') {
+    color: $plum;
+    background-color: transparent;
+    
+  }
+
+}
+
+// Color classes
+
+.plum {
+  background: #dda0dd;
+};
+
+.black {
+  background: #000;
+};
+
+.white {
+  background: #fff;
+};
+
+.palegreen {
+  background: #98fb98;
+};
+
+
+// Color pair classes
+
+.white-on-black {
+  color: $white;
+  background-color: $black;
+  
+}
+
+.palegreen-on-black {
+  color: $palegreen;
+  background-color: $black;
+  
+}
+
+.plum-on-transparent {
+  color: $plum;
+  background-color: transparent;
+  
+}
+

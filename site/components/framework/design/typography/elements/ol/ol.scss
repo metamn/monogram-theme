@@ -1,0 +1,24 @@
+@mixin ol {
+  list-style-type: none;
+  counter-reset: ol;
+
+  display: flex;
+  flex-direction: column;
+
+  li {
+    counter-increment: ol;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: $lem;
+
+    &:before {
+      //content: counter(ol);
+      margin-right: $lem / 2;
+      //@include circle;
+      content: '\2714';
+      color: $green;
+    }
+  }
+}

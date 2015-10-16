@@ -1,0 +1,13 @@
+@mixin circle($radius: $lem * 2, $color-scheme: white-on-black) {
+  width: $radius;
+  height: $radius;
+  border-radius: $radius;
+
+  @include colors($color-scheme);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}

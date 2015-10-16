@@ -1,0 +1,9 @@
+@mixin icon($size: $lem) {
+  width: $size;
+  height: $size;
+  display: flex;
+
+  &__image {
+    @include img(fluid, false, false);
+  }
+}
