@@ -1,7 +1,16 @@
 @mixin monogram__text {
   .title {
+    display: flex;
+
     width: 100vw;
     height: 100vh;
+
+    @include text-style(title);
+    line-height: 1;
+
     @include text-clipping-mask(white-on-black, darken);
   }
+
+  @include monogram__text--portrait;
+  @include monogram__text--landscape;
 }

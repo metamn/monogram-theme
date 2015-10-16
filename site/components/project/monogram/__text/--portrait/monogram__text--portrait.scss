@@ -1,0 +1,7 @@
+@mixin monogram__text--portrait {
+  @include portrait {
+    .title {
+      font-size: 15vh;
+    }
+  }
+}

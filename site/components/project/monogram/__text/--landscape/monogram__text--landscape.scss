@@ -1,0 +1,7 @@
+@mixin monogram__text--landscape {
+  @include landscape {
+    .title {
+      font-size: 15vw;
+    }
+  }
+}
