@@ -9,7 +9,12 @@
   ],
   "avatars": [
     {
-      "name": "Li Yung",
+      "name": "Josh Wink",
+      "role": "DJ & Producer",
+      "image": "josh-wink.jpg"
+    },
+    {
+      "name": "Li Yu",
       "role": "UI/UX Designer and developer",
       "image": "li-yu.jpg"
     },
@@ -17,11 +22,6 @@
       "name": "David Hannemaier Hanson",
       "role": "Ruby on Rails, Basecamp",
       "image": "dhh.jpg"
-    },
-    {
-      "name": "Josh Wink",
-      "role": "DJ & Producer",
-      "image": "josh-wink.jpg"
     },
     {
       "name": "Same Fernandez",

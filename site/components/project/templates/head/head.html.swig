@@ -15,7 +15,8 @@
 
     {{ scripts | safe }}
 
-    {# include '__icons/head__icons.html.swig' #}
+    {% set image = avatar.image %}
+    {% include '__favicon/--simple/head__favicon--simple.html.swig' %}
   </head>
 
   <body>
