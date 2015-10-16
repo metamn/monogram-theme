@@ -1,9 +1,9 @@
-@mixin avatar__image($width) {
+@mixin avatar__image {
   padding: 0 $lem / 2;
-  width: $width;
+  width: $lem * 4;
 
   .img {
     @include img(fluid, false, false);
-    @include border--rounded($width);
+    @include border--rounded($lem * 4);
   }
 }

@@ -2,12 +2,25 @@ html {
   &.home {
     body {
       display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
 
       width: 100vw;
       height: 100vh;
 
-      .home__avatar-and-icons {
-        @include home__avatar-and-icons;
+      .monogram {
+        @include monogram;
+      }
+
+      .avatar {
+        @include avatar;
+        position: relative;
+      }
+
+      .icons {
+        @include icons;
+        position: relative;
       }
     }
   }

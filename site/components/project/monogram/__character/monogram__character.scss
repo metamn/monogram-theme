@@ -1,0 +1,22 @@
+@mixin monogram__character {
+  display: flex;
+  align-items: center;
+  
+  @include border(normal, right);
+
+  &--xl {
+    @include monogram__character--xl;
+  }
+
+  &--l {
+    @include monogram__character--l;
+  }
+
+  &--m {
+    @include monogram__character--m;
+  }
+
+  &--s {
+    @include monogram__character--s;
+  }
+}

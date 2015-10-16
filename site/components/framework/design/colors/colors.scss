@@ -7,26 +7,26 @@
 // Styleguide colors
 
 // Main color
-$pink: #D461B3;
+$plum: #dda0dd;
 
 // Main color
 $black: #000;
 
-// Main color
-$white: #fff;
+// main color
+$palegreen: #98fb98;
 
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 
-  @if ($name == 'white-on-black') {
-    color: $white;
+  @if ($name == 'palegreen-on-black') {
+    color: $palegreen;
     background-color: $black;
     
   }
 
-  @if ($name == 'pink-on-black') {
-    color: $pink;
+  @if ($name == 'plum-on-transparent') {
+    color: $plum;
     background-color: transparent;
     
   }
@@ -35,29 +35,29 @@ $white: #fff;
 
 // Color classes
 
-.pink {
-  background: #D461B3;
+.plum {
+  background: #dda0dd;
 };
 
 .black {
   background: #000;
 };
 
-.white {
-  background: #fff;
+.palegreen {
+  background: #98fb98;
 };
 
 
 // Color pair classes
 
-.white-on-black {
-  color: $white;
+.palegreen-on-black {
+  color: $palegreen;
   background-color: $black;
   
 }
 
-.pink-on-black {
-  color: $pink;
+.plum-on-transparent {
+  color: $plum;
   background-color: transparent;
   
 }
