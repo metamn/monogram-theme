@@ -9,9 +9,9 @@
   ],
   "avatars": [
     {
-      "name": "Josh Wink",
-      "role": "DJ & Producer",
-      "image": "josh-wink.jpg"
+      "name": "Li Yu",
+      "role": "UI/UX Designer and developer",
+      "image": "li-yu.jpg"
     },
     {
       "name": "David Hannemaier Hanson",
@@ -19,14 +19,14 @@
       "image": "dhh.jpg"
     },
     {
+      "name": "Josh Wink",
+      "role": "DJ & Producer",
+      "image": "josh-wink.jpg"
+    },
+    {
       "name": "Same Fernandez",
       "role": "Front-end developer",
       "image": "same-fernandez.jpg"
-    },
-    {
-      "name": "Li Yu",
-      "role": "UI/UX Designer and developer",
-      "image": "li-yu.jpg"
     }
   ],
   "icons": [

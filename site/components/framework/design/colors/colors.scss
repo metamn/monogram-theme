@@ -25,7 +25,7 @@ $white: #fff;
     
   }
 
-  @if ($name == 'pink-on-transparent') {
+  @if ($name == 'pink-on-black') {
     color: $pink;
     background-color: transparent;
     
@@ -56,7 +56,7 @@ $white: #fff;
   
 }
 
-.pink-on-transparent {
+.pink-on-black {
   color: $pink;
   background-color: transparent;
   

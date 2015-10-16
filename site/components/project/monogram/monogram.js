@@ -22,6 +22,10 @@ var setFontSize = function(containerID) {
   if (text.length < 10) {
     container.classList.add('title--size-enlarged');
   }
+
+  if (text.length > 20) {
+    container.classList.add('title--size-lowered');
+  }
 }
 
 setFontSize('.monogram .title');
