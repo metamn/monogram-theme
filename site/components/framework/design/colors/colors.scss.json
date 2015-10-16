@@ -1,8 +1,8 @@
 {
   "colors": [
     {
-      "name": "plum",
-      "value": "#dda0dd",
+      "name": "pink",
+      "value": "#D461B3",
       "description": "Main color"
     },
     {
@@ -14,11 +14,6 @@
       "name": "white",
       "value": "#fff",
       "description": "Main color"
-    },
-    {
-      "name": "palegreen",
-      "value": "#98fb98",
-      "description": "main color"
     }
   ],
   "color_pairs": [
@@ -36,24 +31,11 @@
       ]
     },
     {
-      "name": "palegreen-on-black",
+      "name": "pink-on-transparent",
       "properties": [
         {
           "name": "color",
-          "value": "$palegreen"
-        },
-        {
-          "name": "background-color",
-          "value": "$black"
-        }
-      ]
-    },
-    {
-      "name": "plum-on-transparent",
-      "properties": [
-        {
-          "name": "color",
-          "value": "$plum"
+          "value": "$pink"
         },
         {
           "name": "background-color",

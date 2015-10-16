@@ -1,7 +1,15 @@
 @mixin avatar--mobile($width) {
   @include mobile {
+    flex-direction: column;
+
     &__image {
       @include avatar__image($width);
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
