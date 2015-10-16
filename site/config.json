@@ -12,9 +12,6 @@
     ],
     "footer": [
       {
-        "file": "imagesloaded.pkgd.min.js"
-      },
-      {
         "file": "site.min.js"
       }
     ]
