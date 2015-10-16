@@ -2,13 +2,14 @@
   display: flex;
   flex-wrap: no-wrap;
   align-items: center;
-  
 
   &__image {
-    @include avatar__image;
+    @include avatar__image($lem * 4);
   }
 
   &__text {
     @include avatar__text;
   }
+
+  @include avatar--mobile($lem * 3);
 }

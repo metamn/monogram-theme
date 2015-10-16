@@ -1,0 +1,7 @@
+@mixin avatar--mobile($width) {
+  @include mobile {
+    &__image {
+      @include avatar__image($width);
+    }
+  }
+}
