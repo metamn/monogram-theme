@@ -1,3 +1,4 @@
+// Insert random space into a string
 var insertSpace = function(containerID) {
   var container = document.querySelector(containerID);
   var text = container.innerHTML;
@@ -12,5 +13,17 @@ var insertSpace = function(containerID) {
   container.innerHTML = text;
 }
 
+
+// Increase font size on short names
+var setFontSize = function(containerID) {
+  var container = document.querySelector(containerID);
+  var text = container.innerHTML;
+
+  if (text.length < 10) {
+    container.classList.add('title--size-enlarged');
+  }
+}
+
+setFontSize('.monogram .title');
 insertSpace('.monogram .title');
 setBackgroundImage('.monogram');

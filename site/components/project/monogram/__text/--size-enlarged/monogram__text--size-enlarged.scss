@@ -1,0 +1,9 @@
+@mixin monogram__text--size-enlarged {
+  @include portrait {
+    font-size: 25vh;
+  }
+
+  @include landscape {
+    font-size: 25vw;
+  }
+}

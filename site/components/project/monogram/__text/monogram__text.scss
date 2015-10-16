@@ -1,4 +1,7 @@
 @mixin monogram__text {
+  @include monogram__text--portrait;
+  @include monogram__text--landscape;
+
   .title {
     display: flex;
 
@@ -12,6 +15,7 @@
     text-align: justify;
   }
 
-  @include monogram__text--portrait;
-  @include monogram__text--landscape;
+  .title--size-enlarged {
+    @include monogram__text--size-enlarged;
+  }
 }
