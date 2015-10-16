@@ -9,6 +9,7 @@
     line-height: 1;
 
     @include text-clipping-mask(white-on-black, darken);
+    text-align: justify;
   }
 
   @include monogram__text--portrait;
