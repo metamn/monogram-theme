@@ -5,8 +5,9 @@
   .title {
     display: flex;
 
-    width: 100vw;
-    height: 100vh;
+    padding: 3vh 3vw;
+    width: 94vw;
+    height: 94vh;
 
     @include text-style(title);
     line-height: 1;
