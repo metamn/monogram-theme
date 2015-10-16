@@ -4,12 +4,6 @@
   "images": "assets/images/",
   "icomoon": "icomoon-sprite.svg",
   "javascripts": {
-    "header": [
-      {
-        "file": "picturefill.min.js",
-        "async": "true"
-      }
-    ],
     "footer": [
       {
         "file": "site.min.js"
