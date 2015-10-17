@@ -1,3 +1,5 @@
+// http://davidwalsh.name/css-cube
+
 @mixin cube($width: 200px, $height: 200px) {
 
   &__wrap {
@@ -63,5 +65,9 @@
 
   .cube3d {
   	animation: spin 5s infinite linear;
+
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 }
