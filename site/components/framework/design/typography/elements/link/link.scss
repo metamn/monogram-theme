@@ -7,6 +7,12 @@
 @mixin link($color-scheme: none, $type: none) {
   text-decoration: none;
 
+  @include transition(text-decoration);
+  &:hover,
+  &:active {
+    text-decoration: line-through;
+  }
+
   @if ($color-scheme != none) {
     @include colors($color-scheme);
   }
