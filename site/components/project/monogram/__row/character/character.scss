@@ -1,6 +1,13 @@
-@mixin character($size: $lem, $space: hidden) {
+@mixin character($percentage: 0, $size: $lem, $space: hidden) {
   @include text-style(title);
-  font-size: $size;
+
+  @if ($percentage == 0) {
+    // do not set font size
+  } @else {
+    // font size will be a percentage of the maximum $size possible
+    // - precentage = [0.1 ... 1], 1 means full size
+    font-size: calc(#{$size} * #{$percentage});
+  }
 
   &.character__space {
     @include character__space($space);

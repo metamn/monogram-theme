@@ -1,17 +1,11 @@
 @mixin monogram {
-  position: absolute;
-  z-index: 0;
-
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-
   display: flex;
   flex-direction: column;
 
+  // if size is 100x100
+  overflow: hidden;
+
   &__row {
-    @include monogram__row(100vw, 100vh);
+    @include monogram__row(30vw, 50vh, 0);
   }
 }

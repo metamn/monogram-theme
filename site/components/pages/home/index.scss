@@ -3,25 +3,16 @@ html {
     body {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-
-      width: 100vw;
-      height: 100vh;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 100vh;
 
       .monogram {
         @include monogram;
       }
 
-      .avatar {
-        @include avatar;
-        position: relative;
-        display: none;
-      }
-
       .icons {
         @include icons;
-        position: relative;
-        display: none;
       }
     }
   }
