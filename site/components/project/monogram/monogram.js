@@ -3,31 +3,49 @@ var splitName = function(containerID) {
   var textContainer = container.querySelector('.monogram__name');
   var text = textContainer.innerHTML;
 
-    var chars = text.split("");
+  var charsPerRow = matrixSize(text.length);
+  var chars = text.split("");
+
   for (var i = 0; i < text.length; i++) {
-    var item = document.createElement('div');
-    item.className = 'monogram__character ' + monogramCharacterSize(text.length);
-    item.innerHTML = chars[i];
-    container.appendChild(item);
+    if ((i % charsPerRow) == 0) {
+      createRow(i, Math.min(i + charsPerRow, text.length), chars, container);
+    }
   }
 };
 
 
-// Compute a responsive size for each monogram character
-// - returns a `scale` classname
-function monogramCharacterSize(length) {
+// Create a row in the matrix
+function createRow(i, max, chars, container) {
+  var row = document.createElement('div');
+  row.className = 'monogram__row';
+
+  for (var j = i; j < max; j++) {
+    var char = document.createElement('div');
+    char.className = 'character';
+    char.innerHTML = chars[j];
+    row.appendChild(char);
+  }
+
+  container.appendChild(row);
+}
+
+
+
+// Calculate matrix size for a text
+// - returns the X dimension of the matrix
+function matrixSize(length) {
   switch (true) {
-    case (length <= 5):
-      return 'monogram__character--xl';
+    case (length < 4):
+      return 2;
       break;
-    case (length <= 10):
-      return 'monogram__character--l';
+    case (length < 9):
+      return 3;
       break;
-    case (length <= 15):
-      return 'monogram__character--m';
+    case (length < 16):
+      return 4;
       break;
     default:
-      return 'monogram__character--s';
+      return 5;
   }
 }
 
