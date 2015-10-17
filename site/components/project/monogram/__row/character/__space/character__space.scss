@@ -1,0 +1,9 @@
+@mixin character__space($visibility) {
+  @if ($visibility == hidden) {
+    @include character__space--hidden;
+  }
+
+  @if ($visibility == invisible) {
+    @include character__space--invisible;
+  }
+}

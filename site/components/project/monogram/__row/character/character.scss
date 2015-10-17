@@ -1,7 +1,7 @@
-@mixin character {
+@mixin character($space: hidden) {
   @include text-style(title);
 
   &.character__space {
-    visibility: hidden;
+    @include character__space($space);
   }
 }
