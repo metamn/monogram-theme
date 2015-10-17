@@ -1,5 +1,6 @@
-@mixin character($space: hidden) {
+@mixin character($size: $lem, $space: hidden) {
   @include text-style(title);
+  font-size: $size;
 
   &.character__space {
     @include character__space($space);

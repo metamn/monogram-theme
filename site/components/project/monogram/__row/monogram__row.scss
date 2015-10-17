@@ -7,21 +7,33 @@
 
   &.monogram__row--cols2 {
     height: $height / 2;
+
+    .character {
+      @include character($size: $height / 2);
+    }
   }
 
   &.monogram__row--cols3 {
     height: $height / 3;
+
+    .character {
+      @include character($size: $height / 3);
+    }
   }
 
   &.monogram__row--cols4 {
     height: $height / 4;
+
+    .character {
+      @include character($size: $height / 4);
+    }
   }
 
   &.monogram__row--cols5 {
     height: $height / 5;
-  }
 
-  .character {
-    @include character;
+    .character {
+      @include character($size: $height / 5);
+    }
   }
 }
