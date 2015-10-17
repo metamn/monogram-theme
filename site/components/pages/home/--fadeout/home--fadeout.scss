@@ -1,0 +1,14 @@
+@mixin home--fadeout {
+  .monogram,
+  .icons .icomoon {
+    @include transition(opacity);
+
+    opacity: 1;
+    display: flex;
+
+    &.fadeout {
+      opacity: 0;
+      display: none;
+    }
+  }
+}

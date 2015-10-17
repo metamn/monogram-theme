@@ -15,6 +15,8 @@ html {
       .icons {
         @include icons(white-on-blue);
       }
+
+      @include home--fadeout;
     }
   }
 }
