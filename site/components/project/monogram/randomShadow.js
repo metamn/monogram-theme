@@ -3,7 +3,9 @@ var randomShadow = function(containerID) {
   var random = Math.floor((Math.random() * chars.length));
   var char = chars[random];
 
-  char.classList.contains('shadow') ? char.classList.remove('shadow') : char.classList.add('shadow');
+  if (char) {
+    char.classList.contains('shadow') ? char.classList.remove('shadow') : char.classList.add('shadow');
+  }
 }
 
 
