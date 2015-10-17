@@ -1,8 +1,8 @@
-@mixin cube3d--spin-horizontal {
+@mixin cube3d--spin-horizontal($count) {
   @keyframes spin {
     from { transform: rotateY(0); }
     to { transform: rotateY(360deg); }
   }
 
-  animation: spin 5s infinite linear;
+  animation: spin 5s $count linear;
 }

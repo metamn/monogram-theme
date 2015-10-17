@@ -1,4 +1,4 @@
-@mixin cube3d--spin-vertical ($size){
+@mixin cube3d--spin-vertical($size, $count){
   @keyframes spin-vertical {
     from { transform: rotateX(0); }
     to { transform: rotateX(-360deg); }
@@ -7,7 +7,7 @@
   margin: 0 auto; /* keeps the cube centered */
 
 	transform-origin: 0 $size / 2;
-	animation: spin-vertical 5s infinite linear;
+	animation: spin-vertical 5s $count linear;
 
   &__face {
     &--top {
