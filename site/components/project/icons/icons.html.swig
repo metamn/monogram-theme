@@ -9,7 +9,7 @@
 
   {% for icon in icons %}
     <!-- Modify here -->
-    <!-- Replace dummy data like <a href="http://twitter.com"> with your real data <a href="http://twitter.com/metamn"> -->
+    <!-- Replace dummy data like <a href="{{ icon.url }}"> with your real data <a href="{{ icon.url }}<your-data>"> -->
     {% include '../../framework/structure/icomoon/icomoon.html.swig' %}
   {% endfor %}
 </article>
