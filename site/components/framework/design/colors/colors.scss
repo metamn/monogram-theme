@@ -12,6 +12,9 @@ $white: #fff;
 // Main color
 $blue: #4916DA;
 
+// Secondary color, triadic to blue
+$orange: #E0832D;
+
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
@@ -32,6 +35,10 @@ $blue: #4916DA;
 
 .blue {
   background: #4916DA;
+};
+
+.orange {
+  background: #E0832D;
 };
 
 

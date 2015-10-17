@@ -1,0 +1,3 @@
+@mixin character--shadow($color) {
+  text-shadow: $lem / 4 $lem /4 $color;
+}
