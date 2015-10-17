@@ -16,6 +16,14 @@
       height: $width;
       border: 1px solid;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icomoon {
+        @include icomoon($lem, white-on-blue);
+      }
+
       &--back {
         transform: translateZ(-$width / 2) rotateY(180deg);
       }
