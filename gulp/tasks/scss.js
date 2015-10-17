@@ -17,7 +17,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer-core'),
-    minifyCSS = require('gulp-minify-css');
+    minifyCSS = require('gulp-minify-css'),
+    beautifyCSS = require('gulp-cssbeautify');
 
 
 // Configuration
@@ -34,6 +35,7 @@ var _scss = function(source, dest) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
+    .pipe(beautifyCSS())
     //.pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dest));

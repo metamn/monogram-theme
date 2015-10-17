@@ -8,13 +8,13 @@
 <figure class="{{ klass }}">
   {% if image.link %}{{ l.link(link) }}{% endif %}
 
-  <!-- The default extension is .png but other formats are handled too -->
+  {# The default extension is .png but other formats are handled too #}
   {% set extension = '.png' %}
   {% if image.extension %}
     {% set extension = image.extension %}
   {% endif %}
 
-  <!-- If 'onesize' is set all images will have the same size -->
+  {# If 'onesize' is set all images will have the same size #}
   {% if image.onesize %}
     {% set desktop = image.name + "_" + image.onesize + extension %}
     {% set desktop2x = image.name + "_" + image.onesize + '2x' + extension %}
@@ -25,7 +25,7 @@
     {% set mobile = image.name + "_" + image.onesize + extension %}
     {% set mobile2x = image.name + "_" + image.onesize + '2x' + extension %}
   {% else %}
-    <!-- Naming convention for responsive images -->
+    {# Naming convention for responsive images #}
     {% set desktop = image.name + '_desktop' + extension %}
     {% set desktop2x = image.name + '_desktop2x' + extension %}
     {% set laptop = image.name + '_laptop' + extension %}
@@ -36,7 +36,7 @@
     {% set mobile2x = image.name + '_mobile2x' + extension %}
   {% endif %}
 
-  <!-- Showing different images for different devices -->
+  {# Showing different images for different devices #}
   {% for responsive in image.responsive %}
     {% if responsive.breakpoint == 'desktop' %}
       {% set desktop = responsive.name + '_desktop' + extension %}
@@ -57,7 +57,7 @@
   {% endfor %}
 
 
-  <!-- Figcaption is image title unless is not set explicitely -->
+  {# Figcaption is image title unless is not set explicitely #}
   {% set figcaption = image.title %}
   {% set figcaption_class = 'figcaption--from-title' %}
 
@@ -67,7 +67,7 @@
   {% endif %}
 
 
-  <!-- Images are served from /site also for /styleguide -->
+  {# Images are served from /site also for /styleguide #}
   {% set site_url = site.url %}
   {% if image.site_url %}
     {% set site_url = image.site_url %}
@@ -81,7 +81,7 @@
     <source media="(min-width: 600px)" srcset="{{ site_url }}assets/images/{{ tablet }}, {{ site_url }}assets/images/{{ tablet2x }} 2x">
     <source media="(max-width: 599px)" srcset="{{ site_url }}assets/images/{{ mobile }}, {{ site_url }}assets/images/{{ mobile2x }} 2x">
     <!--[if IE 9]></video><![endif]-->
-    <!-- to make it work with imagesLoaded the 'srcset' is replaced by a standard fallback 'src' -->
+    {# to make it work with imagesLoaded the 'srcset' is replaced by a standard fallback 'src' #}
     <img class="img" src="{{ site_url }}assets/images/{{ laptop }}"  alt="{{ image.title }}">
   </picture>
 
