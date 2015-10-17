@@ -1,0 +1,33 @@
+@mixin cube3d__face($size) {
+  position: absolute;
+  width: $size;
+  height: $size;
+
+  &--back {
+    transform: translateZ(-$size / 2) rotateY(180deg);
+  }
+
+  &--right {
+    transform: rotateY(-270deg) translateX($size / 2);
+    transform-origin: top right;
+  }
+
+  &--left {
+    transform: rotateY(270deg) translateX(-$size / 2);
+    transform-origin: center left;
+  }
+
+  &--top {
+    transform: rotateX(-90deg) translateY(-$size / 2);
+    transform-origin: top center;
+  }
+
+  &--bottom {
+    transform: rotateX(90deg) translateY($size / 2);
+    transform-origin: bottom center;
+  }
+
+  &--front {
+    transform: translateZ($size / 2);
+  }
+}

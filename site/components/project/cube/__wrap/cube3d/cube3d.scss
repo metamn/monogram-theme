@@ -1,0 +1,9 @@
+@mixin cube3d($size) {
+  position: relative;
+  width: $size;
+  transform-style: preserve-3d;
+
+  &__face {
+    @include cube3d__face($size);
+  }
+}

@@ -1,73 +1,24 @@
 // http://davidwalsh.name/css-cube
-
-@mixin cube($width: 200px, $height: 200px) {
-
+@mixin cube($size: 200px) {
   &__wrap {
-  	perspective: 800px;
-  	perspective-origin: 50% 100px;
-  }
+  	@include cube__wrap;
 
-  .cube3d {
-  	position: relative;
-  	width: $width;
-  	transform-style: preserve-3d;
+    .cube3d {
+      @include cube3d($size);
+      @include cube3d--spin-vertical($size);
+      //@include cube3d--spin-horizontal;
 
-    &__face {
-      position: absolute;
-      width: $width;
-      height: $width;
-      border: 1px solid;
+      &__face {
+        border: 1px solid;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      .icomoon {
-        @include icomoon($lem, white-on-blue);
+        .icomoon {
+          @include icomoon($lem, white-on-blue);
+        }
       }
-
-      &--back {
-        transform: translateZ(-$width / 2) rotateY(180deg);
-      }
-
-      &--right {
-        transform: rotateY(-270deg) translateX($width / 2);
-        transform-origin: top right;
-      }
-
-      &--left {
-        transform: rotateY(270deg) translateX(-$width / 2);
-        transform-origin: center left;
-      }
-
-      &--top {
-        transform: rotateX(-90deg) translateY(-$width / 2);
-        transform-origin: top center;
-      }
-
-      &--bottom {
-        transform: rotateX(90deg) translateY($width / 2);
-        transform-origin: bottom center;
-      }
-
-      &--front {
-        transform: translateZ($width / 2);
-      }
-    }
-  }
-
-
-
-  @keyframes spin {
-  	from { transform: rotateY(0); }
-  	to { transform: rotateY(360deg); }
-  }
-
-  .cube3d {
-  	animation: spin 5s infinite linear;
-
-    &:hover {
-      animation-play-state: paused;
     }
   }
 }

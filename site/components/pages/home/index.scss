@@ -22,7 +22,7 @@ html {
       }
 
       .cube {
-        @include cube (5vw, 7vh);
+        @include cube(7vw);
       }
     }
   }
