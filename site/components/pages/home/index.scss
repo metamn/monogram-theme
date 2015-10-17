@@ -5,14 +5,19 @@ html {
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
+
       min-height: 100vh;
+      // Otherwise in Chrome mobile the url bar is too pushy
+      @include mobile {
+        min-height: 110vh;
+      }
 
       .monogram {
-        @include monogram;
+        @include monogram(50vh, 50vh, 1);
       }
 
       .icons {
-        @include icons;
+        @include icons(white-on-blue);
       }
     }
   }

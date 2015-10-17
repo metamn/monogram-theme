@@ -1,45 +1,27 @@
 {
   "colors": [
     {
-      "name": "plum",
-      "value": "#dda0dd",
+      "name": "white",
+      "value": "#fff",
       "description": "Main color"
     },
     {
-      "name": "black",
-      "value": "#000",
+      "name": "blue",
+      "value": "#4916DA",
       "description": "Main color"
-    },
-    {
-      "name": "palegreen",
-      "value": "#98fb98",
-      "description": "main color"
     }
   ],
   "color_pairs": [
     {
-      "name": "palegreen-on-black",
+      "name": "white-on-blue",
       "properties": [
         {
           "name": "color",
-          "value": "$palegreen"
+          "value": "$white"
         },
         {
           "name": "background-color",
-          "value": "$black"
-        }
-      ]
-    },
-    {
-      "name": "plum-on-transparent",
-      "properties": [
-        {
-          "name": "color",
-          "value": "$plum"
-        },
-        {
-          "name": "background-color",
-          "value": "transparent"
+          "value": "$blue"
         }
       ]
     }

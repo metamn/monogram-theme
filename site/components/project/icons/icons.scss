@@ -1,10 +1,10 @@
-@mixin icons {
+@mixin icons($color-scheme) {
   display: flex;
   flex-wrap: wrap;
   padding: $lem / 2;
 
   .icomoon {
-    @include icomoon($color-scheme: plum-on-transparent);
+    @include icomoon($lem, $color-scheme);
     padding: 0 $lem / 2;
   }
 }

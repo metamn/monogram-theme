@@ -1,4 +1,4 @@
-@mixin monogram {
+@mixin monogram($width, $height, $scale) {
   display: flex;
   flex-direction: column;
 
@@ -6,6 +6,6 @@
   overflow: hidden;
 
   &__row {
-    @include monogram__row(30vw, 50vh, 0);
+    @include monogram__row($width, $height, $scale);
   }
 }
