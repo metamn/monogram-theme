@@ -1,10 +1,13 @@
 @mixin icons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  padding: $lem / 2;
+  padding-bottom: $lem * 2;
 
   .icomoon {
     @include icomoon($color-scheme: plum-on-transparent);
     padding: 0 $lem / 2;
   }
+
+  @include icons--landscape;
 }

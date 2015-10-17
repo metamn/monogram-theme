@@ -3,8 +3,7 @@ html {
     body {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: flex-end;
 
       width: 100vw;
       height: 100vh;
@@ -16,6 +15,7 @@ html {
       .avatar {
         @include avatar;
         position: relative;
+        display: none;
       }
 
       .icons {
