@@ -9,4 +9,5 @@
   {% set icons = icons %}
   {% include '../../project/icons/icons.html.swig' %}
 
+  {% include '../../project/cube/cube.html.swig' %}
 {% endblock %}

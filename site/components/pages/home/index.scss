@@ -8,15 +8,22 @@ html {
 
       min-height: 100vh;
 
+      @include home--fadeout;
+
+
       .monogram {
         @include monogram(40vh, 50vh, .5);
+        display: none;
       }
 
       .icons {
         @include icons(white-on-blue);
+        display: none;
       }
 
-      @include home--fadeout;
+      .cube {
+        @include cube;
+      }
     }
   }
 }
