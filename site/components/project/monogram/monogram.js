@@ -8,25 +8,40 @@ var splitName = function(containerID) {
 
   for (var i = 0; i < text.length; i++) {
     if ((i % charsPerRow) == 0) {
-      createRow(i, Math.min(i + charsPerRow, text.length), chars, container);
+      createRow(i, Math.min(i + charsPerRow, text.length), chars, container, charsPerRow);
     }
   }
 };
 
 
 // Create a row in the matrix
-function createRow(i, max, chars, container) {
+function createRow(i, max, chars, container, charsPerRow) {
   var row = document.createElement('div');
   row.className = 'monogram__row';
+  row.classList.add('monogram__row--cols' + charsPerRow);
 
   for (var j = i; j < max; j++) {
-    var char = document.createElement('div');
-    char.className = 'character';
-    char.innerHTML = chars[j];
+    var char = createChar(chars[j]);
     row.appendChild(char);
   }
 
   container.appendChild(row);
+}
+
+
+// Create a character cell in a row
+function createChar(character) {
+  var char = document.createElement('div');
+  char.className = 'character';
+
+  if (character == " ") {
+    char.classList.add('character__space');
+    char.innerHTML = 'x';
+  } else {
+    char.innerHTML = character;
+  }
+
+  return char;
 }
 
 

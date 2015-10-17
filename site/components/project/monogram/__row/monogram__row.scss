@@ -1,0 +1,27 @@
+@mixin monogram__row($width, $height) {
+  width: $width;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.monogram__row--cols2 {
+    height: $height / 2;
+  }
+
+  &.monogram__row--cols3 {
+    height: $height / 3;
+  }
+
+  &.monogram__row--cols4 {
+    height: $height / 4;
+  }
+
+  &.monogram__row--cols5 {
+    height: $height / 5;
+  }
+
+  .character {
+    @include character;
+  }
+}

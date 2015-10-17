@@ -21,6 +21,7 @@ html {
       .icons {
         @include icons;
         position: relative;
+        display: none;
       }
     }
   }

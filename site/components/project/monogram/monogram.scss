@@ -9,13 +9,9 @@
   overflow-x: hidden;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-direction: column;
 
-  @include text-style(title);
-  line-height: 1;
-
-  &__character {
-    @include monogram__character;
+  &__row {
+    @include monogram__row(100vw, 100vh);
   }
 }
