@@ -7,13 +7,9 @@ html {
       justify-content: space-around;
 
       min-height: 100vh;
-      // Otherwise in Chrome mobile the url bar is too pushy
-      @include mobile {
-        min-height: 110vh;
-      }
 
       .monogram {
-        @include monogram(50vh, 50vh, 1);
+        @include monogram(40vh, 50vh, .5);
       }
 
       .icons {
