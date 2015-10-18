@@ -1,3 +1,23 @@
+// On mouse over stop the rotation
+var cubeMouseOver = function(containerID) {
+  var container = document.querySelector(containerID);
+
+  container.addEventListener("mouseover", function() {
+    clearInterval(repeat);
+  });
+
+  container.addEventListener("mouseout", function() {
+    repeat = setInterval(
+      function(){
+        cubeRotate('.cube3d');
+      },
+      2000
+    );
+  });
+}
+
+
+// Rotate randomly the cube
 var cubeRotate = function(containerID) {
   var container = document.querySelector(containerID);
   var xAngle = 0, yAngle = 0;
@@ -34,9 +54,13 @@ var cubeRotate = function(containerID) {
 }
 
 
+// Infinite rotate the cube
 var repeat = setInterval(
   function(){
     cubeRotate('.cube3d');
   },
   2000
 );
+
+// Handle mouse over
+cubeMouseOver('.cube__wrap');

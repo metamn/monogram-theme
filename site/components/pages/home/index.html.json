@@ -2,6 +2,16 @@
   "title": "Home",
   "avatars": [
     {
+      "name": "Josh Wink",
+      "role": "DJ & Producer",
+      "image": "josh-wink.jpg"
+    },
+    {
+      "name": "Li Yu",
+      "role": "UI/UX Designer and developer",
+      "image": "li-yu.jpg"
+    },
+    {
       "name": "Same Fernandez",
       "role": "Front-end developer",
       "image": "same-fernandez.jpg"
@@ -10,16 +20,6 @@
       "name": "David Hannemaier Hanson",
       "role": "Ruby on Rails, Basecamp",
       "image": "dhh.jpg"
-    },
-    {
-      "name": "Li Yu",
-      "role": "UI/UX Designer and developer",
-      "image": "li-yu.jpg"
-    },
-    {
-      "name": "Josh Wink",
-      "role": "DJ & Producer",
-      "image": "josh-wink.jpg"
     }
   ],
   "icons": [
