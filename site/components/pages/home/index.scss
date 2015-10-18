@@ -5,15 +5,11 @@ html {
       width: 100vw;
       position: relative;
       overflow: hidden;
-      
+
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       align-items: center;
-      @include portrait {
-        align-items: flex-start;
-      }
 
       .monogram {
         @include monogram(30vh, 40vh, 0.5);
