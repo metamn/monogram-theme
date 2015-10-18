@@ -1,0 +1,23 @@
+@mixin icons($color-scheme) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .icomoon {
+    @include icomoon($lem, $color-scheme);
+    padding: $lem / 2;
+  }
+}

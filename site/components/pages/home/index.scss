@@ -1,6 +1,11 @@
 html {
   &.home {
     body {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -9,11 +14,13 @@ html {
       @include portrait {
         align-items: flex-start;
       }
-      
-      min-height: 100vh;
 
       .monogram {
         @include monogram(30vh, 40vh, 0.5);
+      }
+
+      .icons {
+        @include icons(white-on-brown);
       }
     }
   }

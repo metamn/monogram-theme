@@ -1,4 +1,6 @@
 @mixin monogram($width, $height, $scale) {
+  position: relative;
+  
   display: flex;
   flex-direction: column;
 
