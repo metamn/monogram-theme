@@ -12,9 +12,4 @@
   &.character__space {
     @include character__space($space);
   }
-
-  @include transition(text-shadow);
-  &.shadow {
-    @include character--shadow($orange);
-  }
 }

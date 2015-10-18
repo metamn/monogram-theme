@@ -10,18 +10,15 @@
 $white: #fff;
 
 // Main color
-$blue: #4916DA;
-
-// Secondary color, triadic to blue
-$orange: #E0832D;
+$brown: rgb(164,130,93);
 
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 
-  @if ($name == 'white-on-blue') {
+  @if ($name == 'white-on-brown') {
     color: $white;
-    background-color: $blue;
+    background-color: $brown;
     
   }
 
@@ -33,20 +30,16 @@ $orange: #E0832D;
   background: #fff;
 };
 
-.blue {
-  background: #4916DA;
-};
-
-.orange {
-  background: #E0832D;
+.brown {
+  background: rgb(164,130,93);
 };
 
 
 // Color pair classes
 
-.white-on-blue {
+.white-on-brown {
   color: $white;
-  background-color: $blue;
+  background-color: $brown;
   
 }
 

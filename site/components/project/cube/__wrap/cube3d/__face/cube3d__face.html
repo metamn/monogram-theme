@@ -1,1 +1,0 @@
-< class="cube3d__face">

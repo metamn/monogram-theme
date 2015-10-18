@@ -8,21 +8,13 @@ html {
 
       min-height: 100vh;
 
-      @include home--fadeout;
-
-
       .monogram {
         @include monogram(40vh, 50vh, .5);
         display: none;
       }
 
-      .icons {
-        @include icons(white-on-blue);
-        display: none;
-      }
-
       .cube {
-        @include cube($lem * 4);
+        @include cube(white-on-brown, $lem * 4);
       }
     }
   }

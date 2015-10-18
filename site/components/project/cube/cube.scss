@@ -1,5 +1,5 @@
 // - http://paulrhayes.com/experiments/cube-3d/
-@mixin cube($size: 200px) {
+@mixin cube($color-scheme, $size: 200px) {
   &__wrap {
   	@include cube__wrap;
 
@@ -14,7 +14,7 @@
         align-items: center;
 
         .icomoon {
-          @include icomoon($lem, white-on-blue);
+          @include icomoon($lem, $color-scheme);
         }
       }
     }

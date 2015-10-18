@@ -6,19 +6,14 @@
       "description": "Main color"
     },
     {
-      "name": "blue",
-      "value": "#4916DA",
+      "name": "brown",
+      "value": "rgb(164,130,93)",
       "description": "Main color"
-    },
-    {
-      "name": "orange",
-      "value": "#E0832D",
-      "description": "Secondary color, triadic to blue"
     }
   ],
   "color_pairs": [
     {
-      "name": "white-on-blue",
+      "name": "white-on-brown",
       "properties": [
         {
           "name": "color",
@@ -26,7 +21,7 @@
         },
         {
           "name": "background-color",
-          "value": "$blue"
+          "value": "$brown"
         }
       ]
     }
