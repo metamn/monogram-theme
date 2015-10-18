@@ -1,4 +1,4 @@
-@mixin character($percentage: 0, $size: $lem, $space: hidden) {
+@mixin character($percentage: 0, $size: $lem, $space: invisible) {
   @include text-style(title);
 
   @if ($percentage == 0) {
