@@ -3,31 +3,27 @@
   width: $size;
   height: $size;
 
+  &--front {
+    transform: rotateX(90deg) translateZ($size / 2);
+  }
+
   &--back {
-    transform: translateZ(-$size / 2) rotateY(180deg);
-  }
-
-  &--right {
-    transform: rotateY(-270deg) translateX($size / 2);
-    transform-origin: top right;
-  }
-
-  &--left {
-    transform: rotateY(270deg) translateX(-$size / 2);
-    transform-origin: center left;
+    transform: translateZ($size / 2);
   }
 
   &--top {
-    transform: rotateX(-90deg) translateY(-$size / 2);
-    transform-origin: top center;
+    transform: rotateY(90deg) translateZ($size / 2);
   }
 
   &--bottom {
-    transform: rotateX(90deg) translateY($size / 2);
-    transform-origin: bottom center;
+    transform: rotateY(180deg) translateZ($size / 2);
   }
 
-  &--front {
-    transform: translateZ($size / 2);
+  &--left {
+    transform: rotateY(-90deg) translateZ($size / 2);
+  }
+
+  &--right {
+    transform: rotateX(-90deg) translateZ($size / 2) rotate(180deg);
   }
 }
