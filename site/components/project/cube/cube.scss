@@ -1,13 +1,14 @@
-// http://davidwalsh.name/css-cube
+// - http://davidwalsh.name/css-cube
+// - http://paulrhayes.com/experiments/cube-3d/
 @mixin cube($size: 200px) {
   &__wrap {
   	@include cube__wrap;
 
     .cube3d {
       @include cube3d($size);
-      //@include cube3d--spin-vertical($size, 1);
+      @include cube3d--spin-vertical($size, infinite);
       //@include cube3d--spin-horizontal(1);
-      @include cube3d--spin-both($size, 1);
+      //@include cube3d--spin-both($size, 1);
 
       &__face {
         border: 1px solid;
