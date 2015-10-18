@@ -7,5 +7,4 @@
   {% include '../../project/monogram/monogram.html.swig' %}
 
   {% set icons = icons %}
-  {% include '../../project/cube/cube.html.swig' %}
 {% endblock %}

@@ -4,16 +4,16 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
 
+      align-items: center;
+      @include portrait {
+        align-items: flex-start;
+      }
+      
       min-height: 100vh;
 
       .monogram {
-        @include monogram(30vh, 30vh, 0.5);
-      }
-
-      .cube {
-        @include cube(white-on-brown, $lem * 4);
+        @include monogram(30vh, 40vh, 0.5);
       }
     }
   }
