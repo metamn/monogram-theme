@@ -5,6 +5,8 @@
   // if size is 100x100
   overflow: hidden;
 
+  border: 1px solid;
+
   &__row {
     @include monogram__row($width, $height, $scale);
   }

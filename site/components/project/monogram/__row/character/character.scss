@@ -1,5 +1,7 @@
-@mixin character($percentage: 0, $size: $lem, $space: invisible) {
+@mixin character($percentage: 0, $size: $lem, $space: hidden) {
   @include text-style(title);
+
+  padding: $lem;
 
   @if ($percentage == 0) {
     // do not set font size
