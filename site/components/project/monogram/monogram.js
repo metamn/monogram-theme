@@ -21,7 +21,7 @@ function createRow(i, max, chars, container, charsPerRow) {
   row.classList.add('monogram__row--cols' + charsPerRow);
 
   for (var j = i; j < max; j++) {
-    var char = createChar(chars[j]);
+    var char = createCharGlitch(chars[j]);
     row.appendChild(char);
   }
 
@@ -33,6 +33,23 @@ function createRow(i, max, chars, container, charsPerRow) {
 function createChar(character) {
   var char = document.createElement('div');
   char.className = 'character';
+
+  if (character == " ") {
+    char.classList.add('character__space');
+    char.innerHTML = 'x';
+  } else {
+    char.innerHTML = character;
+  }
+
+  return char;
+}
+
+
+// Create a character cell in a row, for Glitch Text
+function createCharGlitch(character) {
+  var char = document.createElement('div');
+  char.className = 'character';
+  char.setAttribute('data-text', character);
 
   if (character == " ") {
     char.classList.add('character__space');
