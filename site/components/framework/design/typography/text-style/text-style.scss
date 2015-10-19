@@ -21,7 +21,7 @@
   @if ($variant == 'default') {
     @include font(montserrat-normal);
     @include scale(default);
-    @include colors(white-on-brown);
+    @include colors(white-on-black);
     
     
     
@@ -54,7 +54,7 @@
 .text-style--default {
   @include font(montserrat-normal);
   @include scale(default);
-  @include colors(white-on-brown);
+  @include colors(white-on-black);
   
   
   

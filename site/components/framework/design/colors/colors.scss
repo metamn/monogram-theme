@@ -10,15 +10,15 @@
 $white: #fff;
 
 // Main color
-$brown: #A4825D;
+$black: #000;
 
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 
-  @if ($name == 'white-on-brown') {
+  @if ($name == 'white-on-black') {
     color: $white;
-    background-color: $brown;
+    background-color: $black;
     
   }
 
@@ -30,16 +30,16 @@ $brown: #A4825D;
   background: #fff;
 };
 
-.brown {
-  background: #A4825D;
+.black {
+  background: #000;
 };
 
 
 // Color pair classes
 
-.white-on-brown {
+.white-on-black {
   color: $white;
-  background-color: $brown;
+  background-color: $black;
   
 }
 

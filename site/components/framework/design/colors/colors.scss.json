@@ -6,14 +6,14 @@
       "description": "Main color"
     },
     {
-      "name": "brown",
-      "value": "#A4825D",
+      "name": "black",
+      "value": "#000",
       "description": "Main color"
     }
   ],
   "color_pairs": [
     {
-      "name": "white-on-brown",
+      "name": "white-on-black",
       "properties": [
         {
           "name": "color",
@@ -21,7 +21,7 @@
         },
         {
           "name": "background-color",
-          "value": "$brown"
+          "value": "$black"
         }
       ]
     }
