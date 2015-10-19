@@ -9,6 +9,16 @@
       "name": "black",
       "value": "#000",
       "description": "Main color"
+    },
+    {
+      "name": "magenta",
+      "value": "rgb(255,0,255)",
+      "description": "Main color"
+    },
+    {
+      "name": "cyan",
+      "value": "rgb(0,255,255)",
+      "description": "Main color"
     }
   ],
   "color_pairs": [
@@ -22,6 +32,19 @@
         {
           "name": "background-color",
           "value": "$black"
+        }
+      ]
+    },
+    {
+      "name": "cyan-on-magenta",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$cyan"
+        },
+        {
+          "name": "background-color",
+          "value": "$magenta"
         }
       ]
     }

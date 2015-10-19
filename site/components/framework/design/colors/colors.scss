@@ -12,6 +12,12 @@ $white: #fff;
 // Main color
 $black: #000;
 
+// Main color
+$magenta: rgb(255,0,255);
+
+// Main color
+$cyan: rgb(0,255,255);
+
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
@@ -19,6 +25,12 @@ $black: #000;
   @if ($name == 'white-on-black') {
     color: $white;
     background-color: $black;
+    
+  }
+
+  @if ($name == 'cyan-on-magenta') {
+    color: $cyan;
+    background-color: $magenta;
     
   }
 
@@ -34,12 +46,26 @@ $black: #000;
   background: #000;
 };
 
+.magenta {
+  background: rgb(255,0,255);
+};
+
+.cyan {
+  background: rgb(0,255,255);
+};
+
 
 // Color pair classes
 
 .white-on-black {
   color: $white;
   background-color: $black;
+  
+}
+
+.cyan-on-magenta {
+  color: $cyan;
+  background-color: $magenta;
   
 }
 
