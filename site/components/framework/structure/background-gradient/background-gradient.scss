@@ -1,3 +1,26 @@
+@mixin background-gradient {
+  $colors: ('red', 'green', 'blue', 'magenta', 'cyan', 'yellow', 'white', 'black', 'gray');
+  $stops: ('0px', '13px', '26px', '30px', '47px', '50px', '69px', '71px', '72px', '100px');
+
+  background-image: repeating-linear-gradient(to left, gradient-row($colors, $stops));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @mixin background-gradient2 {
   background-image:
     repeating-linear-gradient(to left, blue 00%, blue 10%, red 10%, red 20%, lime 20%, lime 30%),
@@ -14,7 +37,7 @@
 
 
 // http://css-class.com/test/css/3/colors/rgb-aliasing-gradient.htm
-@mixin background-gradient {
+@mixin background-gradient3 {
   background-image:
     repeating-linear-gradient(to left, blue 0.0%, blue 0.1%, red 0.1%, red 0.2%, lime 0.2%, lime 0.3%),
     repeating-linear-gradient(to left, red 0%, red 0.1%, blue 0.1%, blue 0.2%, lime 0.2%, lime 0.3%),
