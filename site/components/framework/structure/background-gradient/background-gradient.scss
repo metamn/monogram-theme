@@ -1,8 +1,23 @@
 @mixin background-gradient {
-  $colors: ('red', 'green', 'blue', 'magenta', 'cyan', 'yellow', 'white', 'black', 'gray');
-  $stops: ('0px', '13px', '26px', '30px', '47px', '50px', '69px', '71px', '72px', '100px');
+  $color-columns: (
+    ('red', 'green', 'blue', 'magenta', 'cyan', 'yellow', 'white', 'black', 'gray'),
+    ('magenta', 'cyan', 'red', 'green', 'blue', 'white', 'black', 'yellow', 'gray')
+  );
+  $color-stops: (
+    ('0px', '13px', '26px', '30px', '47px', '50px', '69px', '71px', '72px', '100px'),
+    ('0px', '13px', '26px', '30px', '47px', '50px', '69px', '71px', '72px', '100px')
+  );
 
-  background-image: repeating-linear-gradient(to left, gradient-row($colors, $stops));
+  $columns: "repeating-linear-gradient(to left, #{gradient-row(nth($color-columns, 1), nth($color-stops, 1)))})";
+  @for $i from 2 through length($color-columns) {
+    $columns: $columns#{', '}#{"repeating-linear-gradient(to left, #{gradient-row(nth($color-columns, $i), nth($color-stops, $i)))})"};
+  }
+
+  background-image: unquote($columns);
+  background-size:
+    100% 50%,
+    100% 100%;
+  background-repeat: no-repeat;
 }
 
 
