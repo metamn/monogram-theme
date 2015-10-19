@@ -1,23 +1,33 @@
 @mixin icons__background--squares {
+  $size: $lem;
+
   background-image:
-    repeating-linear-gradient(to left, blue 0.0%, blue 0.1%, red 0.1%, red 0.2%, lime 0.2%, lime 0.3%),
-    repeating-linear-gradient(to left, red 0%, red 0.1%, blue 0.1%, blue 0.2%, lime 0.2%, lime 0.3%),
-    repeating-linear-gradient(to left, blue 0.0%, blue 0.1%, red 0.1%, red 0.2%, lime 0.2%, lime 0.3%),
-    repeating-linear-gradient(to left, aqua 0%, aqua 0.1%, fuchsia 0.1%, fuchsia 0.2%, yellow 0.2%, yellow 0.3%),
-    repeating-linear-gradient(to left, aqua 0%, aqua 0.1%, yellow 0.1%, yellow 0.2%, fuchsia 0.2%, fuchsia 0.3%),
-    repeating-linear-gradient(to left, yellow 0.0%, yellow 0.1%, aqua 0.1%, aqua 0.2%, fuchsia 0.2%, fuchsia 0.3%),
-    repeating-linear-gradient(to left, white 0.0%, white 0.1%, black 0.1%, black 0.2%),
-    repeating-linear-gradient(to left, aqua 0.0%, aqua 0.1%, fuchsia 0.1%, fuchsia 0.2%),
-    repeating-linear-gradient(to left, red 0%, red 0.1%, lime 0.1%, lime 0.2%);
+    repeating-linear-gradient(to left,
+      gainsboro calc(0 * #{$size}),
+      gainsboro calc(1 * #{$size}),
+      darkgray calc(1 * #{$size}),
+      darkgray calc(2 * #{$size}),
+      black calc(2 * #{$size}),
+      black calc(3 * #{$size}),
+      silver calc(3 * #{$size}),
+      silver calc(4 * #{$size}),
+      dimgray calc(4 * #{$size}),
+      dimgray calc(5 * #{$size})
+    ),
+    repeating-linear-gradient(to left,
+      silver calc(3 * #{$size}),
+      silver calc(4 * #{$size}),
+      darkgray calc(1 * #{$size}),
+      darkgray calc(2 * #{$size}),
+      black calc(2 * #{$size}),
+      black calc(3 * #{$size}),
+      dimgray calc(4 * #{$size}),
+      dimgray calc(5 * #{$size}),
+      gainsboro calc(0 * #{$size}),
+      gainsboro calc(1 * #{$size})
+    );
   background-size:
-    100% 10%,
-    100% 20%,
-    100% 30%,
-    100% 40%,
-    100% 50%,
-    100% 60%,
-    100% 70%,
-    100% 80%,
-    100% 90%;
+    100% 5vh,
+    100% 10vh;
   background-repeat: no-repeat;
 }

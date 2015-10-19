@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include icons__background--full;
+  @include background-gradient__row;
 
   &__row {
     display: flex;

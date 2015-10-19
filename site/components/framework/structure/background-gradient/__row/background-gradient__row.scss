@@ -1,0 +1,16 @@
+@mixin background-gradient__row {
+  $colors: ('red', 'green', 'blue', 'magenta', 'cyan', 'yellow');
+
+  // Returns a single gradient from start to stop
+  @function gradient($color) {
+    @return "#{$color} 0px, #{$color} 10px";
+  }
+
+  // Returns a complete list of gradients
+  $gradients: #{gradient(nth($colors, 1))};
+  @for $i from 2 through length($colors) {
+    $gradients: $gradients#{', '}#{gradient(nth($colors, $i))};
+  }
+
+  background-image: repeating-linear-gradient(to left, unquote($gradients));
+}
