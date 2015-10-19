@@ -1,5 +1,4 @@
-// http://css-class.com/test/css/3/colors/rgb-aliasing-gradient.htm
-@mixin icons__background--full {
+@mixin icons__background--squares {
   background-image:
     repeating-linear-gradient(to left, blue 0.0%, blue 0.1%, red 0.1%, red 0.2%, lime 0.2%, lime 0.3%),
     repeating-linear-gradient(to left, red 0%, red 0.1%, blue 0.1%, blue 0.2%, lime 0.2%, lime 0.3%),
