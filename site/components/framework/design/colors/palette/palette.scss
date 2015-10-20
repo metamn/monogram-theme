@@ -18,7 +18,8 @@
 // Generate random steps for a color palette to be used as a background gradient
 // - metric can be px, vw, % or em
 // - if no metric given a random one will be chosen
-@function gradient-stops($nr-of-stops, $metric: none) {
+// - $granularity multiplies the size, ie making it much bigger or much smaller
+@function gradient-stops($nr-of-stops, $metric: none, $granularity: 1) {
   @if ($metric != none) {
     $rnd: random-sizes($metric);
   } @else {
@@ -26,6 +27,8 @@
     $metric: nth($units, random(length($units)));
     $rnd: random-sizes($metric);
   }
+
+  $metric: $metric * $granularity;
 
   $return: ();
   $return: append($return, 0 * $metric);

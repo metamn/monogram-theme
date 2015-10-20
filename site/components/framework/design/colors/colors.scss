@@ -28,6 +28,12 @@ $cyan: rgb(0,255,255);
     
   }
 
+  @if ($name == 'black-on-white') {
+    color: $black;
+    background-color: $white;
+    
+  }
+
   @if ($name == 'cyan-on-magenta') {
     color: $cyan;
     background-color: $magenta;
@@ -60,6 +66,12 @@ $cyan: rgb(0,255,255);
 .white-on-black {
   color: $white;
   background-color: $black;
+  
+}
+
+.black-on-white {
+  color: $black;
+  background-color: $white;
   
 }
 

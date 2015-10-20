@@ -1,4 +1,4 @@
-@mixin icons($color-scheme) {
+@mixin icons($color-scheme, $color-start, $color-stop) {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include background-gradient__palette(10, #000, #fff, 20);
+  @include background-gradient__palette(3, $color-start, $color-stop, 20, 2);
 
   &__row {
     display: flex;

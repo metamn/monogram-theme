@@ -1,4 +1,4 @@
-@mixin monogram__row($width, $height, $percentage) {
+@mixin monogram__row($width, $height, $percentage, $color-scheme) {
   display: flex;
   align-items: center;
 
@@ -10,7 +10,7 @@
     height: $height / 2;
 
     .character {
-      @include character($percentage, $size: $height / 2);
+      @include character($color-scheme, $percentage, $size: $height / 2);
     }
   }
 
@@ -18,7 +18,7 @@
     height: $height / 3;
 
     .character {
-      @include character($percentage, $size: $height / 3);
+      @include character($color-scheme, $percentage, $size: $height / 3);
     }
   }
 
@@ -26,7 +26,7 @@
     height: $height / 4;
 
     .character {
-      @include character($percentage, $size: $height / 4);
+      @include character($color-scheme, $percentage, $size: $height / 4);
     }
   }
 
@@ -34,7 +34,7 @@
     height: $height / 5;
 
     .character {
-      @include character($percentage, $size: $height / 5);
+      @include character($color-scheme, $percentage, $size: $height / 5);
     }
   }
 }

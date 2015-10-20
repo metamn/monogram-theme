@@ -12,11 +12,11 @@ html {
       align-items: center;
 
       .monogram {
-        @include monogram(30vh, 40vh, 0.5);
+        @include monogram(60vh, 70vh, 0.5, black-on-white);
       }
 
       .icons {
-        @include icons(white-on-black);
+        @include icons(black-on-white, $white, $black);
       }
     }
   }

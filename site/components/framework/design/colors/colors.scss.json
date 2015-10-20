@@ -36,6 +36,19 @@
       ]
     },
     {
+      "name": "black-on-white",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$black"
+        },
+        {
+          "name": "background-color",
+          "value": "$white"
+        }
+      ]
+    },
+    {
       "name": "cyan-on-magenta",
       "properties": [
         {

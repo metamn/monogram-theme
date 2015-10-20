@@ -12,8 +12,8 @@
   8. Height (px) -- height of the glitch
 */
 
-@mixin glitch-text($name, $intensity, $color, $background, $highlightColor1, $highlightColor2, $width, $height) {
-  color: $color;
+@mixin glitch-text($name, $intensity, $color-scheme, $highlightColor1, $highlightColor2, $width, $height) {
+  @include colors($color-scheme);
   position: relative;
   $steps: $intensity;
 
@@ -43,7 +43,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: $background;
+    @include colors($color-scheme);
     clip: rect(0, 0, 0, 0);
   }
 

@@ -1,4 +1,4 @@
-@mixin monogram($width, $height, $scale) {
+@mixin monogram($width, $height, $scale, $color-scheme) {
   position: relative;
   z-index: 1;
 
@@ -6,13 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include colors(cyan-on-magenta);
-  @include border--thick(all);
-  padding: $lem;
-
-
-
   &__row {
-    @include monogram__row($width, $height, $scale);
+    @include monogram__row($width, $height, $scale, $color-scheme);
   }
 }
