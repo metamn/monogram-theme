@@ -13,10 +13,26 @@
   $palette: color-palette(3, #000, #fff);
   $color-columns:
     $palette,
+    randomize-list($palette),
+    randomize-list($palette),
+    randomize-list($palette),
+    randomize-list($palette),
+    randomize-list($palette),
+    randomize-list($palette),
+    randomize-list($palette),
+    randomize-list($palette),
     randomize-list($palette);
   $color-stops:
     gradient-stops(3, 1%),
-    0px 10px 20px 30px;
+    gradient-stops(3, 1px),
+    gradient-stops(3, 1em),
+    gradient-stops(3, 1vw),
+    gradient-stops(3, 1px),
+    gradient-stops(3, 1vh),
+    gradient-stops(3, 1rem),
+    gradient-stops(3, 1px),
+    gradient-stops(3, 1px),
+    gradient-stops(3, 1%);
 
   @include background-gradient($color-columns, $color-stops);
 

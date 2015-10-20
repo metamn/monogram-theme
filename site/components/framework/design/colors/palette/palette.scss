@@ -25,7 +25,11 @@
   } @else if ($metric == 1vw) {
     $rnd: 15;
   } @else if ($metric == 1em) {
-    $rnd: 37em;
+    $rnd: 37;
+  } @else if ($metric == 1rem) {
+    $rnd: 27;
+  } @else if ($metric == 1vh) {
+    $rnd: 7;
   }
 
   $return: ();
@@ -35,7 +39,6 @@
     $return: append($return, $random);
   }
 
-  @debug $return;
   @return $return;
 }
 
