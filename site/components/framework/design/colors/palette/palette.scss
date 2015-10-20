@@ -1,0 +1,28 @@
+// Generate a color palette
+// - the lighter color should come first
+// - returns a list
+@function color-palette($nr-of-colors, $start, $stop) {
+  $step: round(100% / ($nr-of-colors - 2) / 2);
+
+  $return: ();
+  $return: append($return, $start);
+  @for $i from 1 through ($nr-of-colors - 2) {
+    $return: append($return, lighten($start, $step * $i));
+  }
+  $return: append($return, $stop);
+
+  @return $return;
+}
+
+
+// Randomize a randomized list
+// - returns a list
+@function randomize-list($list) {
+  $return: ();
+  @for $i from 1 through length($list) {
+    $random: random(length($list));
+    $return: append($return, nth($list, $random));
+  }
+  
+  @return $return;
+}

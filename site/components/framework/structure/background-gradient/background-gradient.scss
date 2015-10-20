@@ -1,3 +1,6 @@
+// Create a gradient matrix
+// - it has to have min two rows
+// - if only a single row needed the __row mixin should be used instead
 @mixin background-gradient($color-columns, $color-stops) {
   $columns: "repeating-linear-gradient(to left, #{gradient-row(nth($color-columns, 1), nth($color-stops, 1)))})";
   @for $i from 2 through length($color-columns) {
@@ -16,20 +19,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @mixin background-gradient2 {
   background-image:
     repeating-linear-gradient(to left, blue 00%, blue 10%, red 10%, red 20%, lime 20%, lime 30%),
@@ -37,35 +26,5 @@
   background-size:
     100% 50%,
     100% 100%;
-  background-repeat: no-repeat;
-}
-
-
-
-
-
-
-// http://css-class.com/test/css/3/colors/rgb-aliasing-gradient.htm
-@mixin background-gradient3 {
-  background-image:
-    repeating-linear-gradient(to left, blue 0.0%, blue 0.1%, red 0.1%, red 0.2%, lime 0.2%, lime 0.3%),
-    repeating-linear-gradient(to left, red 0%, red 0.1%, blue 0.1%, blue 0.2%, lime 0.2%, lime 0.3%),
-    repeating-linear-gradient(to left, blue 0.0%, blue 0.1%, red 0.1%, red 0.2%, lime 0.2%, lime 0.3%),
-    repeating-linear-gradient(to left, aqua 0%, aqua 0.1%, fuchsia 0.1%, fuchsia 0.2%, yellow 0.2%, yellow 0.3%),
-    repeating-linear-gradient(to left, aqua 0%, aqua 0.1%, yellow 0.1%, yellow 0.2%, fuchsia 0.2%, fuchsia 0.3%),
-    repeating-linear-gradient(to left, yellow 0.0%, yellow 0.1%, aqua 0.1%, aqua 0.2%, fuchsia 0.2%, fuchsia 0.3%),
-    repeating-linear-gradient(to left, white 0.0%, white 0.1%, black 0.1%, black 0.2%),
-    repeating-linear-gradient(to left, aqua 0.0%, aqua 0.1%, fuchsia 0.1%, fuchsia 0.2%),
-    repeating-linear-gradient(to left, red 0%, red 0.1%, lime 0.1%, lime 0.2%);
-  background-size:
-    100% 10%,
-    100% 20%,
-    100% 30%,
-    100% 40%,
-    100% 50%,
-    100% 60%,
-    100% 70%,
-    100% 80%,
-    100% 90%;
   background-repeat: no-repeat;
 }
