@@ -15,31 +15,9 @@
     $palette,
     randomize-list($palette);
   $color-stops:
-    0px 10px 20px 30px,
+    gradient-stops(3, 1%),
     0px 10px 20px 30px;
 
-  $color-columns2: (
-    ('red', 'green', 'blue', 'magenta', 'cyan', 'yellow', 'white', 'black', 'gray'),
-    ('magenta', 'cyan', 'red', 'green', 'blue', 'white', 'black', 'yellow', 'gray'),
-    ('green', 'cyan', 'red', 'magenta', 'white', 'blue', 'black', 'gray', 'yellow'),
-    ('white', 'blue', 'black', 'gray', 'yellow', 'green', 'cyan', 'red', 'magenta'),
-    ('white', 'blue', 'yellow', 'cyan', 'red', 'magenta', 'green', 'black', 'gray'),
-    ('red', 'magenta', 'green', 'black', 'gray', 'white', 'blue', 'yellow', 'cyan'),
-    ('green', 'black', 'red', 'magenta', 'gray', 'yellow', 'cyan', 'white', 'blue'),
-    ('gray', 'black', 'red', 'magenta', 'cyan', 'yellow', 'white', 'blue', 'green'),
-    ('black', 'white', 'blue', 'yellow', 'green', 'gray', 'cyan', 'red', 'magenta')
-  );
-  $color-stops2: (
-    ('0px', '13px', '26px', '30px', '47px', '50px', '69px', '71px', '72px', '100px'),
-    ('0px', '17px', '19px', '20px', '43px', '50px', '60px', '71px', '79px', '160px'),
-    ('0px', '1px', '9px', '20px', '23px', '30px', '66px', '77px', '79px', '100px'),
-    ('0px', '17px', '19px', '20px', '43px', '50px', '60px', '71px', '79px', '160px'),
-    ('0px', '13px', '26px', '30px', '47px', '50px', '69px', '71px', '72px', '100px'),
-    ('0px', '1px', '9px', '20px', '23px', '30px', '66px', '77px', '79px', '100px'),
-    ('0px', '17px', '19px', '20px', '43px', '50px', '60px', '71px', '79px', '160px'),
-    ('0px', '1px', '9px', '20px', '23px', '30px', '66px', '77px', '79px', '100px'),
-    ('0px', '1px', '9px', '20px', '23px', '30px', '66px', '77px', '79px', '100px')
-  );
   @include background-gradient($color-columns, $color-stops);
 
   &__row {

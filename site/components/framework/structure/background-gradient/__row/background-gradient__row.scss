@@ -5,7 +5,6 @@
 
 // Returns multiple gradients
 @function gradient-row($colors, $stops) {
-  @debug length($colors);
   // Returns a complete list of gradients
   $gradients: #{gradient(nth($colors, 1), nth($stops, 1), nth($stops, 2))};
   @for $i from 2 through length($colors) {

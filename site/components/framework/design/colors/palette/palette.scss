@@ -15,7 +15,32 @@
 }
 
 
-// Randomize a randomized list
+// Generate random steps for a color palette to be used as a background gradient
+// - metric can be px, vw, % or em
+@function gradient-stops($nr-of-stops, $metric) {
+  @if ($metric == 1px) {
+    $rnd: 100;
+  } @else if ($metric == 1%) {
+    $rnd: 15;
+  } @else if ($metric == 1vw) {
+    $rnd: 15;
+  } @else if ($metric == 1em) {
+    $rnd: 37em;
+  }
+
+  $return: ();
+  $return: append($return, 0 * $metric);
+  @for $i from 1 through $nr-of-stops {
+    $random: random($rnd) * $metric;
+    $return: append($return, $random);
+  }
+
+  @debug $return;
+  @return $return;
+}
+
+
+// Randomize a list
 // - returns a list
 @function randomize-list($list) {
   $return: ();
@@ -23,6 +48,6 @@
     $random: random(length($list));
     $return: append($return, nth($list, $random));
   }
-  
+
   @return $return;
 }
