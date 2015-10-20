@@ -10,37 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  $palette: color-palette(3, #000, #fff);
-  $color-columns:
-    $palette,
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette),
-    randomize-list($palette);
-  $color-stops:
-    gradient-stops(3, 1%),
-    gradient-stops(3, 1px),
-    gradient-stops(3, 1em),
-    gradient-stops(3, 1vw),
-    gradient-stops(3, 1vh),
-    gradient-stops(3, 1rem),
-    gradient-stops(3, 1px),
-    gradient-stops(3, 1px),
-    gradient-stops(3, 1vh),
-    gradient-stops(3, 1rem),
-    gradient-stops(3, 1px),
-    gradient-stops(3, 1px),
-    gradient-stops(3, 1%);
-
-  @include background-gradient($color-columns, $color-stops);
+  @include background-gradient__palette(10, #000, #fff, 20);
 
   &__row {
     display: flex;

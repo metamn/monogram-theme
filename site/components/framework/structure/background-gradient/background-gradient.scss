@@ -1,8 +1,8 @@
 // Create a gradient matrix
 // - it has to have min two rows
 // - if only a single row needed the __row mixin should be used instead
-@mixin background-gradient($color-columns, $color-stops) {
-  
+@mixin background-gradient($color-columns, $color-stops) {  
+
   $columns: "repeating-linear-gradient(to left, #{gradient-row(nth($color-columns, 1), nth($color-stops, 1)))})";
   @for $i from 2 through length($color-columns) {
     $columns: $columns#{', '}#{"repeating-linear-gradient(to left, #{gradient-row(nth($color-columns, $i), nth($color-stops, $i)))})"};
