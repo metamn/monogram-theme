@@ -1,9 +1,13 @@
-@mixin map {
+@mixin map($width, $height) {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
-  height: 100%;
+  width: $width;
+  height: $height;
 
   z-index: 0;
+
+  #tangram {
+    @include tangram($width, $height);
+  }
 }
