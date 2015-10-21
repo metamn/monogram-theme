@@ -27,6 +27,17 @@ module.exports = {
 
 
 
+  // supported maps : Tangram scenes
+  map_extensions: '/*.{yaml}',
+
+  // video source folder
+  map_src: 'site/assets/maps',
+
+  // video destination folder
+  map_dest: 'dist/assets/maps',
+
+
+
 
   // supported videos
   video_extensions: '/*.{mp4,webm}',

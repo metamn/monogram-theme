@@ -11,6 +11,10 @@ html {
       justify-content: center;
       align-items: center;
 
+      .map {
+        @include map;
+      }
+
       .monogram {
         @include monogram(60vh, 70vh, 0.5, black-on-white);
       }

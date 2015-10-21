@@ -6,6 +6,12 @@
   "javascripts": {
     "footer": [
       {
+        "file": "leaflet.js"
+      },
+      {
+        "file": "tangram.min.js"
+      },
+      {
         "file": "site.min.js"
       }
     ]

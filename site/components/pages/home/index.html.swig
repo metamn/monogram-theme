@@ -3,6 +3,8 @@
 {% extends '../../project/templates/default/default.html.swig' %}
 {% block content %}
 
+  {% include '../../project/map/map.html.swig' %}
+
   {% set name = avatar.name %}
   {% include '../../project/monogram/monogram.html.swig' %}
 
