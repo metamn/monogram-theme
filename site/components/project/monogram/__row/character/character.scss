@@ -1,6 +1,5 @@
 @mixin character($color-scheme: none, $percentage: 0, $size: $lem, $space: hidden) {
   @include text-style(title);
-  @include glitch-text('character', 17, $color-scheme, red, blue, 450, 115);
 
   @if ($percentage == 0) {
     // do not set font size

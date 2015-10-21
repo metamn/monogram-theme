@@ -1,22 +1,8 @@
-@mixin icons($color-scheme, $color-start, $color-stop) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
+@mixin icons($color-scheme) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @include background-gradient__palette(3, $color-start, $color-stop, 20, 2);
-
-  &__row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
   .icomoon {
     @include icomoon($lem, $color-scheme);

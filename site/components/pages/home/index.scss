@@ -16,7 +16,7 @@ html {
       }
 
       .icons {
-        @include icons(black-on-white, $white, $black);
+        @include icons(black-on-white);
       }
     }
   }
