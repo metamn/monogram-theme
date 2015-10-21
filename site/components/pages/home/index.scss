@@ -16,7 +16,7 @@ html {
       }
 
       .monogram {
-        @include monogram(60vh, 70vh, 0.5, black-on-white);
+        @include monogram(20vh, 30vh, 0, black-on-white);
       }
 
       .icons {
