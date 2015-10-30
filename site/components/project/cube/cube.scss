@@ -2,7 +2,7 @@
 // - http://paulrhayes.com/experiments/cube-3d/
 //
 // - background faces must have a more opaque color then the fornt face
-@mixin cube($color-scheme, $color-for-background-faces, $size: 200px) {
+@mixin cube($color-scheme, $color-scheme-hover, $color-for-background-faces, $size: 200px) {
   display: flex;
   justify-content: center;
 
@@ -10,19 +10,7 @@
   	@include cube__wrap($size);
 
     .cube3d {
-      @include cube3d($size, $color-for-background-faces);
-
-      &__face {
-        border: 1px solid;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .icomoon {
-          @include icomoon($lem, $color-scheme);
-        }
-      }
+      @include cube3d($size, $color-scheme, $color-scheme-hover, $color-for-background-faces);
     }
   }
 }

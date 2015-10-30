@@ -25,6 +25,12 @@ $lightbrown: rgba(164, 130, 93, 0.5);
     
   }
 
+  @if ($name == 'brown-on-white') {
+    color: $brown;
+    background-color: $white;
+    
+  }
+
 }
 
 // Color classes
@@ -47,6 +53,12 @@ $lightbrown: rgba(164, 130, 93, 0.5);
 .white-on-brown {
   color: $white;
   background-color: $brown;
+  
+}
+
+.brown-on-white {
+  color: $brown;
+  background-color: $white;
   
 }
 

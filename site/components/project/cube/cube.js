@@ -1,22 +1,24 @@
 // On mouse over stop the rotation
 var cubeMouseOver = function(containerID) {
-  var container = document.querySelector(containerID);
+  var faces = document.querySelectorAll(containerID);
 
-  container.addEventListener("mouseover", function() {
-    clearInterval(repeat);
-    container.classList.add('mouseover');
-  });
+  for (var i = 0; i < faces.length; i++) {
+    faces[i].addEventListener("mouseover", function() {
+      clearInterval(repeat);
+      this.classList.add('mouseover');
+    });
 
-  container.addEventListener("mouseout", function() {
-    container.classList.remove('mouseover');
+    faces[i].addEventListener("mouseout", function() {
+      this.classList.remove('mouseover');
 
-    repeat = setInterval(
-      function(){
-        cubeRotate('.cube3d');
-      },
-      2000
-    );
-  });
+      repeat = setInterval(
+        function(){
+          cubeRotate('.cube3d');
+        },
+        2000
+      );
+    });
+  }
 }
 
 

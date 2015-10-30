@@ -12,7 +12,7 @@
     },
     {
       "name": "lightbrown",
-      "value": "rgba(164, 130, 93, 0.5)",
+      "value": "rgba(164, 130, 93, 0.75)",
       "description": "Secondary color"
     }
   ],
@@ -27,6 +27,19 @@
         {
           "name": "background-color",
           "value": "$brown"
+        }
+      ]
+    },
+    {
+      "name": "brown-on-white",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$brown"
+        },
+        {
+          "name": "background-color",
+          "value": "$white"
         }
       ]
     }

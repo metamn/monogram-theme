@@ -1,4 +1,4 @@
-@mixin cube3d($size, $color-for-background-faces) {
+@mixin cube3d($size, $color-scheme, $color-scheme-hover, $color-for-background-faces) {
   position: relative;
   margin: 0 auto;
   height: $size;
@@ -8,6 +8,6 @@
 
 
   &__face {
-    @include cube3d__face($size, $color-for-background-faces);
+    @include cube3d__face($size, $color-scheme, $color-scheme-hover, $color-for-background-faces);
   }
 }
