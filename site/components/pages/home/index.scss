@@ -12,7 +12,7 @@ html {
       align-items: center;
 
       .map {
-        @include map(100px, 100px);
+        @include map(500px, 500px);
       }
 
       .monogram {
