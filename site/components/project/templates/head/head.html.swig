@@ -11,14 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Modify here -->
-    <title>{{ avatar.name }} - {{ avatar.role }}</title>
+    <title>{{ avatar.name }}</title>
     <link href="{{ site.url }}assets/styles/site.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     {{ scripts | safe }}
 
-    <!-- Modify here -->
-    {% set image = avatar.image %}
-    {% include '__favicon/--simple/head__favicon--simple.html.swig' %}
+    {% include '__favicon/head__favicon.html.swig' %}
   </head>
 
   <body>

@@ -1,3 +1,5 @@
+<!-- Modify here (optional) -->
+<!-- To change your favicon you'll first generate it with http://www.favicomatic.com/ then copy all files to assets/images/icons -->
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ site.url }}{{ site.images }}/icons/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}{{ site.images }}/icons/apple-touch-icon-114x114.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}{{ site.images }}/icons/apple-touch-icon-72x72.png" />
@@ -11,6 +13,7 @@
 <link rel="icon" type="image/png" href="{{ site.url }}{{ site.images }}/icons/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{ site.url }}{{ site.images }}/icons/favicon-16x16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="{{ site.url }}{{ site.images }}/icons/favicon-128.png" sizes="128x128" />
+<!-- Modify here -->
 <meta name="application-name" content="{{ site.title }}"/>
 <meta name="msapplication-TileColor" content="#FFFFFF" />
 <meta name="msapplication-TileImage" content="{{ site.url }}{{ site.images }}/icons/mstile-144x144.png" />
