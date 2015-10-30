@@ -7,8 +7,13 @@
     },
     {
       "name": "brown",
-      "value": "#A4825D",
+      "value": "rgba(164, 130, 93, 1)",
       "description": "Main color"
+    },
+    {
+      "name": "lightbrown",
+      "value": "rgba(164, 130, 93, 0.5)",
+      "description": "Secondary color"
     }
   ],
   "color_pairs": [

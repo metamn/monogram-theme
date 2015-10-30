@@ -4,9 +4,12 @@ var cubeMouseOver = function(containerID) {
 
   container.addEventListener("mouseover", function() {
     clearInterval(repeat);
+    container.classList.add('mouseover');
   });
 
   container.addEventListener("mouseout", function() {
+    container.classList.remove('mouseover');
+
     repeat = setInterval(
       function(){
         cubeRotate('.cube3d');
@@ -26,17 +29,17 @@ var cubeRotate = function(containerID) {
   var direction = random % 4;
 
   switch(direction) {
-    case 0: // left
-      yAngle -= 90;
-      break;
-    case 1: // up
+    case 0: // up
       xAngle += 90;
       break;
-    case 2: // right
-      yAngle += 90;
-      break;
-    case 3: // down
+    case 1: // down
       xAngle -= 90;
+      break;
+    case 2: // left
+      yAngle -= 90;
+      break;
+    case 3: // right
+      yAngle += 90;
       break;
   };
 
@@ -63,4 +66,4 @@ var repeat = setInterval(
 );
 
 // Handle mouse over
-cubeMouseOver('.cube__wrap');
+cubeMouseOver('.cube3d__face');

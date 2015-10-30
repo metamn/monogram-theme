@@ -1,13 +1,13 @@
-@mixin cube3d($size) {
+@mixin cube3d($size, $color-for-background-faces) {
   position: relative;
   margin: 0 auto;
   height: $size;
   width: $size;
-  transition: transform 2s linear;
+  transition: transform 1s linear;
   transform-style: preserve-3d;
 
 
   &__face {
-    @include cube3d__face($size);
+    @include cube3d__face($size, $color-for-background-faces);
   }
 }

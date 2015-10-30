@@ -10,7 +10,10 @@
 $white: #fff;
 
 // Main color
-$brown: #A4825D;
+$brown: rgba(164, 130, 93, 1);
+
+// Secondary color
+$lightbrown: rgba(164, 130, 93, 0.5);
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -31,7 +34,11 @@ $brown: #A4825D;
 };
 
 .brown {
-  background: #A4825D;
+  background: rgba(164, 130, 93, 1);
+};
+
+.lightbrown {
+  background: rgba(164, 130, 93, 0.5);
 };
 
 

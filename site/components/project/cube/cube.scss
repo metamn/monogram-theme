@@ -1,13 +1,16 @@
+// 3d Rotating cube
 // - http://paulrhayes.com/experiments/cube-3d/
-@mixin cube($color-scheme, $size: 200px) {
+//
+// - background faces must have a more opaque color then the fornt face
+@mixin cube($color-scheme, $color-for-background-faces, $size: 200px) {
   display: flex;
   justify-content: center;
-  
+
   &__wrap {
   	@include cube__wrap($size);
 
     .cube3d {
-      @include cube3d($size);
+      @include cube3d($size, $color-for-background-faces);
 
       &__face {
         border: 1px solid;

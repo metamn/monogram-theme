@@ -1,7 +1,8 @@
-@mixin cube3d__face($size) {
+@mixin cube3d__face($size, $color-for-background-faces) {
   position: absolute;
   width: $size;
   height: $size;
+  background: $color-for-background-faces;
 
   &--front {
     transform: rotateX(90deg) translateZ($size / 2);

@@ -1,6 +1,6 @@
 @mixin cube__wrap($size) {
-  perspective: 800px;
-  perspective-origin: 50% 200px;
+  perspective: $size * 2;
+  perspective-origin: 50% $size / 2;
 
   width: $size;
   cursor: pointer;
