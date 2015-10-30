@@ -26,6 +26,12 @@ module.exports = {
   images_dest: 'dist/assets/images',
 
 
+  // Favicons
+  favicons_src: 'site/assets/images/favicons',
+
+  favicons_dest: 'dist/assets/images/icons',
+
+
 
 
   // supported videos
