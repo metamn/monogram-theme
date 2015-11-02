@@ -157,8 +157,8 @@ var cubeGestures = function(containerID) {
 // Infinitely rotate the cube
 var repeat = setInterval(
   function() {
-    //rotationDirection = randomDirection(rotationDirection);
-    //cubeRotate('.cube3d', rotationDirection);
+    rotationDirection = randomDirection(rotationDirection);
+    cubeRotate('.cube3d', rotationDirection);
   },
   rotationSpeed
 );
