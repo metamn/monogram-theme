@@ -1,7 +1,7 @@
 // 3d Rotating cube
 // - http://paulrhayes.com/experiments/cube-3d/
 //
-// - background faces must have a more opaque color then the fornt face
+// - background faces must have a more opaque color compared to the front face
 @mixin cube($color-scheme, $color-scheme-hover, $color-for-background-faces, $size: 200px) {
   display: flex;
   justify-content: center;

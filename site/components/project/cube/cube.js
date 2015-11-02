@@ -4,6 +4,9 @@ var rotationDirection = 0;
 // Rotation speed in ms
 var rotationSpeed = 1500;
 
+// Initial rotation agle
+var xAngle = 0, yAngle = 0;
+
 
 
 // On mouse over stop the rotation
@@ -45,7 +48,6 @@ var randomDirection = function(previousDirection) {
 // Rotate the cube
 var cubeRotate = function(containerID, direction) {
   var container = document.querySelector(containerID);
-  var xAngle = 0, yAngle = 0;
 
   switch(direction) {
     case 0: // up
@@ -76,6 +78,47 @@ var cubeRotate = function(containerID, direction) {
 }
 
 
+// Rotate the cube on keypress
+// - it disables the automatic rotation
+document.addEventListener('keydown', function(e) {
+  clearInterval(repeat);
+
+  switch(e.keyCode) {
+    case 37: // left
+      rotationDirection = 2;
+      cubeRotate('.cube3d', rotationDirection);
+      break;
+    case 38: // up
+      rotationDirection = 0;
+      cubeRotate('.cube3d', rotationDirection);
+      break;
+    case 39: // right
+      rotationDirection = 3;
+      cubeRotate('.cube3d', rotationDirection);
+      break;
+    case 40: // down
+      rotationDirection = 1;
+      cubeRotate('.cube3d', rotationDirection);
+      break;
+    case 32: // space
+      // stop the rotation
+      break;
+    case 27: // escape
+      // restart the rotation
+      repeat = setInterval(
+        function(){
+          rotationDirection = randomDirection(rotationDirection);
+          cubeRotate('.cube3d', rotationDirection);
+        },
+        rotationSpeed
+      );
+    break;
+  };
+
+}, false);
+
+
+
 // Infinitely rotate the cube
 var repeat = setInterval(
   function() {
@@ -84,6 +127,8 @@ var repeat = setInterval(
   },
   rotationSpeed
 );
+
+
 
 // Handle mouse over
 cubeMouseOver('.cube3d__face');
