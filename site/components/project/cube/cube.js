@@ -4,7 +4,7 @@ var rotationDirection = 0;
 // Rotation speed in ms
 var rotationSpeed = 1500;
 
-// Initial rotation agle
+// Initial rotation angle (as is in the CSS)
 var xAngle = 0, yAngle = 0;
 
 
@@ -64,7 +64,15 @@ var cubeRotate = function(containerID, direction) {
       break;
   };
 
-  transform(container, "rotateX(" + xAngle + "deg) rotateY(" + yAngle + "deg)");
+  // Removes a certain rotation angle distorting the cube
+  if ((direction > 1) && ((Math.abs(xAngle) == 0) || ((Math.abs(xAngle) / 10) % 2 == 0))) {
+    rotateAxis = "rotateY(" + yAngle + "deg)";
+  } else {
+    rotateAxis = "rotateZ(" + yAngle + "deg)";
+  }
+
+  console.log('x:' + xAngle + ' y:' + yAngle);
+  transform(container, "rotateX(" + xAngle + "deg) " + rotateAxis);
 
   // Cross browser CSS transform
   function transform(container, style) {
@@ -139,7 +147,6 @@ var cubeGestures = function(containerID) {
     clearInterval(repeat);
     cubeRotate('.cube3d', 1);
   });
-
 
   hammer.on("swipeleft", function() {
     clearInterval(repeat);
