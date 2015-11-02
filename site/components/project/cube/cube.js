@@ -119,14 +119,53 @@ document.addEventListener('keydown', function(e) {
 
 
 
+// Rotate the cube with gestures
+var cubeGestures = function(containerID) {
+  var container = document.querySelector(containerID);
+  var hammer = new Hammer(container);
+
+  hammer.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL,
+    threshold: 0,
+    velocity: 0.001
+  });
+
+  hammer.on("swipeup", function() {
+    clearInterval(repeat);
+    cubeRotate('.cube3d', 0);
+  });
+
+  hammer.on("swipedown", function() {
+    clearInterval(repeat);
+    cubeRotate('.cube3d', 1);
+  });
+
+
+  hammer.on("swipeleft", function() {
+    clearInterval(repeat);
+    cubeRotate('.cube3d', 2);
+  });
+
+  hammer.on("swiperight", function() {
+    clearInterval(repeat);
+    cubeRotate('.cube3d', 3);
+  });
+}
+
+
+
 // Infinitely rotate the cube
 var repeat = setInterval(
   function() {
-    rotationDirection = randomDirection(rotationDirection);
-    cubeRotate('.cube3d', rotationDirection);
+    //rotationDirection = randomDirection(rotationDirection);
+    //cubeRotate('.cube3d', rotationDirection);
   },
   rotationSpeed
 );
+
+
+// Handle gestures
+cubeGestures('body');
 
 
 
