@@ -1,3 +1,11 @@
+// Initial rotating direction
+var rotationDirection = 0;
+
+// Rotation speed in ms
+var rotationSpeed = 1500;
+
+
+
 // On mouse over stop the rotation
 var cubeMouseOver = function(containerID) {
   var faces = document.querySelectorAll(containerID);
@@ -13,9 +21,10 @@ var cubeMouseOver = function(containerID) {
 
       repeat = setInterval(
         function(){
-          cubeRotate('.cube3d');
+          rotationDirection = randomDirection(rotationDirection);
+          cubeRotate('.cube3d', rotationDirection);
         },
-        2000
+        rotationSpeed
       );
     });
   }
@@ -27,7 +36,6 @@ var randomDirection = function(previousDirection) {
   do {
     var random = Math.floor(Math.random() * 4000);
     var direction = random % 4;
-    console.log("d:" + direction);
   } while (direction == previousDirection);
 
   return direction;
@@ -38,8 +46,6 @@ var randomDirection = function(previousDirection) {
 var cubeRotate = function(containerID, direction) {
   var container = document.querySelector(containerID);
   var xAngle = 0, yAngle = 0;
-
-  console.log('d2: ' + direction);
 
   switch(direction) {
     case 0: // up
@@ -69,15 +75,14 @@ var cubeRotate = function(containerID, direction) {
   }
 }
 
-var direction = 0;
 
-// Infinite rotate the cube
+// Infinitely rotate the cube
 var repeat = setInterval(
   function() {
-    direction = randomDirection(direction);
-    cubeRotate('.cube3d', direction);
+    rotationDirection = randomDirection(rotationDirection);
+    cubeRotate('.cube3d', rotationDirection);
   },
-  1000
+  rotationSpeed
 );
 
 // Handle mouse over
