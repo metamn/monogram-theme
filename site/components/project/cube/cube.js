@@ -22,13 +22,24 @@ var cubeMouseOver = function(containerID) {
 }
 
 
-// Rotate randomly the cube
-var cubeRotate = function(containerID) {
+// Get a random direction
+var randomDirection = function(previousDirection) {
+  do {
+    var random = Math.floor(Math.random() * 4000);
+    var direction = random % 4;
+    console.log("d:" + direction);
+  } while (direction == previousDirection);
+
+  return direction;
+}
+
+
+// Rotate the cube
+var cubeRotate = function(containerID, direction) {
   var container = document.querySelector(containerID);
   var xAngle = 0, yAngle = 0;
 
-  var random = Math.floor(Math.random() * 4000);
-  var direction = random % 4;
+  console.log('d2: ' + direction);
 
   switch(direction) {
     case 0: // up
@@ -58,13 +69,15 @@ var cubeRotate = function(containerID) {
   }
 }
 
+var direction = 0;
 
 // Infinite rotate the cube
 var repeat = setInterval(
-  function(){
-    cubeRotate('.cube3d');
+  function() {
+    direction = randomDirection(direction);
+    cubeRotate('.cube3d', direction);
   },
-  2000
+  1000
 );
 
 // Handle mouse over

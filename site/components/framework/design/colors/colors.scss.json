@@ -12,7 +12,7 @@
     },
     {
       "name": "lightbrown",
-      "value": "rgba(164, 130, 93, 0.75)",
+      "value": "rgba(164, 130, 93, 0.4)",
       "description": "Secondary color"
     }
   ],
