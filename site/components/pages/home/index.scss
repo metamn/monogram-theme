@@ -13,7 +13,7 @@ html {
       }
 
       .cube {
-        @include cube(white-on-brown, brown-on-white, $lightbrown, $lem * 4);
+        @include cube;
         padding: 0 0 10vh 15vw;
       }
     }

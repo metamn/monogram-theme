@@ -7,6 +7,9 @@
   "javascripts": {
     "footer": [
       {
+        "file": "three.min.js"
+      },
+      {
         "file": "hammer.min.js"
       },
       {
