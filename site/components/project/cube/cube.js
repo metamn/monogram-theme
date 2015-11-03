@@ -64,15 +64,7 @@ var cubeRotate = function(containerID, direction) {
       break;
   };
 
-  // Removes a certain rotation angle distorting the cube
-  if ((direction > 1) && ((Math.abs(xAngle) == 0) || ((Math.abs(xAngle) / 10) % 2 == 0))) {
-    rotateAxis = "rotateY(" + yAngle + "deg)";
-  } else {
-    rotateAxis = "rotateZ(" + yAngle + "deg)";
-  }
-
-  console.log('x:' + xAngle + ' y:' + yAngle);
-  transform(container, "rotateX(" + xAngle + "deg) " + rotateAxis);
+  transform(container, "rotateX(" + xAngle + "deg)" + " rotateY(" + yAngle + "deg) ");
 
   // Cross browser CSS transform
   function transform(container, style) {
