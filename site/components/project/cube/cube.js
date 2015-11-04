@@ -78,6 +78,7 @@ var cubeRotate = function(containerID) {
       opacity: 0.8
     });
 
+    var faceMaterials = [];
   	var geometry = new THREE.Geometry();
   	geometry.vertices = vertex;
 
@@ -85,6 +86,7 @@ var cubeRotate = function(containerID) {
   	for (var faceNum = 0; faceNum < data.face.length; faceNum++) {
   		for (var i = 0; i < data.face[faceNum].length - 2; i++) {
   			geometry.faces[faceIndex] = new THREE.Face3(data.face[faceNum][0], data.face[faceNum][i+1], data.face[faceNum][i+2]);
+        faceMaterials.push(faceMaterial);
   			faceIndex++;
   		}
   	}
@@ -92,7 +94,7 @@ var cubeRotate = function(containerID) {
   	geometry.computeFaceNormals();
   	geometry.computeVertexNormals();
 
-  	faces = new THREE.Mesh(geometry, faceMaterial);
+  	faces = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(faceMaterials));
   	faces.scale.multiplyScalar(1.01);
   	polyhedron.add(faces);
 
@@ -149,7 +151,7 @@ var cubeRotate = function(containerID) {
     this.polyhedronMesh = new THREE.Object3D();
     scene.add(polyhedronMesh);
 
-    displayPolyhedron(POLYHEDRA.Icosahedron);
+    displayPolyhedron(POLYHEDRA.Cube);
   }
 
   cubeInit(containerID);
