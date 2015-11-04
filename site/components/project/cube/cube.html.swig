@@ -1,5 +1,7 @@
 <section class="cube">
   <h3>Cube</h3>
 
-  <div class="cube__container"></div>
+  <div class="cube__container">
+    
+  </div>
 </section>

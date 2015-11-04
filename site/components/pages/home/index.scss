@@ -9,12 +9,10 @@ html {
 
       .monogram {
         @include monogram(30vh, 30vh, 0);
-        padding: 0 10vw 15vh;
       }
 
       .cube {
         @include cube;
-        padding: 0 0 10vh 15vw;
       }
     }
   }
