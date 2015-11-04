@@ -69,16 +69,30 @@ var cubeRotate = function(containerID) {
   	polyhedron.add(edgeMesh);
 
 
+    // Texture
+    var canvas1 = document.createElement('canvas');
+    canvas1.width = 100;
+    canvas1.height = 100;
+    var context1 = canvas1.getContext('2d');
+    context1.font = "Bold 400px Helvetica";
+    context1.fillStyle = "rgba(255,0,0,0.95)";
+    context1.fillText('50', 0, 30);
+
+    // canvas contents will be used for a texture
+    var texture1 = new THREE.Texture(canvas1)
+    texture1.needsUpdate = true;
+
+
     // Face
   	var faceMaterial = new THREE.MeshBasicMaterial({
       color: 0xA4825D,
-      vertexColors: THREE.NoColors,
+      vertexColors: THREE.FaceColors,
       side: THREE.FrontSide,
       transparent: parameters.transparent,
-      opacity: 0.8
+      opacity: 0.8,
+      map: texture1
     });
 
-    var faceMaterials = [];
   	var geometry = new THREE.Geometry();
   	geometry.vertices = vertex;
 
@@ -86,15 +100,14 @@ var cubeRotate = function(containerID) {
   	for (var faceNum = 0; faceNum < data.face.length; faceNum++) {
   		for (var i = 0; i < data.face[faceNum].length - 2; i++) {
   			geometry.faces[faceIndex] = new THREE.Face3(data.face[faceNum][0], data.face[faceNum][i+1], data.face[faceNum][i+2]);
-        faceMaterials.push(faceMaterial);
-  			faceIndex++;
+        faceIndex++;
   		}
   	}
 
   	geometry.computeFaceNormals();
   	geometry.computeVertexNormals();
 
-  	faces = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(faceMaterials));
+  	faces = new THREE.Mesh(geometry, faceMaterial);
   	faces.scale.multiplyScalar(1.01);
   	polyhedron.add(faces);
 
