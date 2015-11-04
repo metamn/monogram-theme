@@ -9,15 +9,29 @@ var cubeRotate = function(containerID) {
   var cubeInit = function(containerID) {
     scene = new THREE.Scene();
 
-    // init cube
-    geometry = new THREE.CubeGeometry(2, 2, 2);
-    material = new THREE.MeshBasicMaterial({ wireframe: true });
+    var verticesOfCube = [
+    -1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
+    -1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
+    ];
 
-    object = new THREE.Mesh(geometry, material);
-    cube = new THREE.BoxHelper(object);
-    cube.material.color.set(0xffffff);
+    var indicesOfFaces = [
+        2,1,0,    0,3,2,
+        0,4,7,    7,3,0,
+        0,1,5,    5,4,0,
+        1,2,6,    6,5,1,
+        2,3,7,    7,6,2,
+        4,5,6,    6,7,4
+    ];
 
-    scene.add(cube);
+    geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 2 );
+    material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+    cube = new THREE.Mesh( geometry, material );
+
+    //edges = new THREE.EdgesHelper( cube, 0x00ff00 );
+
+    scene.add( cube );
+    //scene.add( edges );
+
 
     // init camera
     camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 10);
