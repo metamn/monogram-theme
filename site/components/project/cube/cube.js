@@ -10,7 +10,13 @@ var cubeRotate = function(containerID) {
     scene = new THREE.Scene();
 
     // init cube
-    cube = new THREE.Mesh(new THREE.CubeGeometry(2, 2, 2), new THREE.MeshNormalMaterial());
+    geometry = new THREE.CubeGeometry(2, 2, 2);
+    material = new THREE.MeshBasicMaterial({ wireframe: true });
+
+    object = new THREE.Mesh(geometry, material);
+    cube = new THREE.BoxHelper(object);
+    cube.material.color.set(0xffffff);
+
     scene.add(cube);
 
     // init camera
@@ -21,7 +27,7 @@ var cubeRotate = function(containerID) {
     // init renderer
     renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true 
+      alpha: true
     });
     renderer.setSize(WIDTH, HEIGHT);
 
