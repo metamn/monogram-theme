@@ -39,16 +39,16 @@ var cubeRotate = function(containerID) {
   }
 
   function polyhedronDataToMesh(data) {
-	var polyhedron = new THREE.Object3D();
+	   var polyhedron = new THREE.Object3D();
 
-	// convert vertex data to THREE.js vectors
-	var vertex = []
-	for (var i = 0; i < data.vertex.length; i++)
-		vertex.push( new THREE.Vector3( data.vertex[i][0], data.vertex[i][1], data.vertex[i][2] ).multiplyScalar(100) );
+  	// convert vertex data to THREE.js vectors
+  	var vertex = []
+  	for (var i = 0; i < data.vertex.length; i++)
+  		vertex.push( new THREE.Vector3( data.vertex[i][0], data.vertex[i][1], data.vertex[i][2] ).multiplyScalar(100) );
 
-	var vertexGeometry = new THREE.SphereGeometry( 6, 12, 6 );
-	var vertexMaterial = new THREE.MeshLambertMaterial( { color: 0x222244 } );
-	var vertexSingleMesh = new THREE.Mesh( vertexGeometry );
+  	var vertexGeometry = new THREE.SphereGeometry( 6, 12, 6 );
+  	var vertexMaterial = new THREE.MeshLambertMaterial( { color: 0x222244 } );
+  	var vertexSingleMesh = new THREE.Mesh( vertexGeometry );
 
 	var vertexAmalgam = new THREE.Geometry();
 	for (var i = 0; i < data.vertex.length; i++)
@@ -143,8 +143,6 @@ function update()
 		camera.position.setLength(150);
 	if (camera.position.length() > 500)
 		camera.position.setLength(500);
-
-	controls.update();
 }
 
 function render()
