@@ -7,7 +7,10 @@
   "javascripts": {
     "footer": [
       {
-        "file": "Three58.js"
+        "file": "svgml3d.js"
+      },
+      {
+        "file": "platonic.js"
       },
       {
         "file": "hammer.min.js"

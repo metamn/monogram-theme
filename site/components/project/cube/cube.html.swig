@@ -1,7 +1,11 @@
 <section class="cube">
   <h3>Cube</h3>
 
-  <div class="cube__container">
-    
+  <div class="cube__icons">
+    {% for icon in icons %}
+      <!-- Modify here -->
+      <!-- Replace dummy data like <a href="{{ icon.url }}"> with your real data <a href="{{ icon.url }}<your-data>"> -->
+      {% include '../../framework/structure/icomoon/icomoon.html.swig' %}
+    {% endfor %}
   </div>
 </section>
