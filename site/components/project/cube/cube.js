@@ -70,17 +70,28 @@ var cubeRotate = function(containerID) {
 
 
     // Texture
-    var canvas1 = document.createElement('canvas');
-    canvas1.width = 100;
-    canvas1.height = 100;
-    var context1 = canvas1.getContext('2d');
-    context1.font = "Bold 400px Helvetica";
-    context1.fillStyle = "rgba(255,0,0,0.95)";
-    context1.fillText('50', 0, 30);
+    var canvas = document.createElement('canvas');
+    canvas.width = 100;
+    canvas.height = 100;
+    var context = canvas.getContext('2d');
+    var texture = new THREE.Texture(canvas);
 
-    // canvas contents will be used for a texture
-    var texture1 = new THREE.Texture(canvas1)
-    texture1.needsUpdate = true;
+    // load an image
+    var imageObj = new Image();
+    imageObj.src = "assets/images/youtube.png";
+
+    imageObj.onload = function() {
+      context.drawImage(imageObj, 0, 0);
+      if (texture) // checks if texture exists
+        texture.needsUpdate = true;
+    };
+
+    var material = new THREE.MeshBasicMaterial( {map: texture, side:THREE.DoubleSide} );
+    material.transparent = true;
+
+    var mesh = new THREE.Mesh(new THREE.PlaneGeometry(canvas.width, canvas.height), material);
+    mesh.position.set(0, 50, -50);
+    scene.add(mesh);
 
 
     // Face
@@ -90,7 +101,7 @@ var cubeRotate = function(containerID) {
       side: THREE.FrontSide,
       transparent: parameters.transparent,
       opacity: 0.8,
-      map: texture1
+      map: texture
     });
 
   	var geometry = new THREE.Geometry();
@@ -107,7 +118,7 @@ var cubeRotate = function(containerID) {
   	geometry.computeFaceNormals();
   	geometry.computeVertexNormals();
 
-  	faces = new THREE.Mesh(geometry, faceMaterial);
+  	faces = new THREE.Mesh(geometry, material);
   	faces.scale.multiplyScalar(1.01);
   	polyhedron.add(faces);
 
