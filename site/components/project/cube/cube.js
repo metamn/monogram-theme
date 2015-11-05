@@ -8,29 +8,27 @@ function Init() {
     }
     S = new Scene3D(SVGObjects[0], 0, 300, 300);
   } else {
-    S=new Scene3D(document.getElementById("Scene1"),1);
+    S = new Scene3D(document.getElementById("Scene1"),1);
   }
 
-  /*
-  T = new Tetrahedron(S, "#0080ff", "#0000ff", "#000000", 1);
-  T.SetId(0);
-
-
-  O = new Octahedron(S, "#0080ff", "#0000ff", "#000000", 1);
-  O.Zoom(1.4);
-  O.SetId(1);
-
-  C = new Cube(S, "#0080ff", "#0000ff", "#000000", 1);
+  C = new Cube(S, "", "", "#ffffff", 1);
   C.Zoom(0.9);
   C.SetId(2);
 
-  I = new Icosahedron(S, "#0080ff", "#0000ff", "#000000", 1);
-  I.SetId(3);
-  */
+  /*
+  T = new Tetrahedron(S, "", "", "#ffffff", 1);
+  T.SetId(0);
 
-  D=new Dodecahedron(S, "#0080ff", "#0000ff", "#000000", 1);
+  O = new Octahedron(S, "", "", "#ffffff", 1);
+  O.Zoom(1.4);
+  O.SetId(1);
+
+  I = new Icosahedron(S, "", "", "#ffffff", 1);
+  I.SetId(3);
+
+  D=new Dodecahedron(S, "", "", "#ffffff", 1);
   D.SetId(4);
-  
+  */
 
   S.AutoCenter();
   S.Center.Zoom(0.0);
