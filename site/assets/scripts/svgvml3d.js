@@ -426,7 +426,7 @@ function _Poly3DDraw(aShape)
       aShape.setAttribute("fill",this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center));
     else aShape.setAttribute("fill","none");
     // by cs
-    aShape.setAttribute("fill","url(#imgpattern)");
+    //aShape.setAttribute("fill","url(#imgpattern)");
     if (this.StrokeColor) aShape.setAttribute("stroke",this.StrokeColor);
     else aShape.setAttribute("stroke",this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center));
     aShape.setAttribute("stroke-width",parseInt(this.StrokeWeight));

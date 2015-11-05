@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="OnLoadEvent(evt)">
   <defs>
       <pattern id="imgpattern" x="0" y="0" width="1" height="1">
-        <image x="100" y="100" width="48" height="48" xlink:href="http://lorempixel.com/output/animals-q-c-640-480-2.jpg"/>
+        <image x="10" y="100" width="48" height="48" xlink:href="http://lorempixel.com/output/animals-q-c-640-480-2.jpg"/>
       </pattern>
   </defs>
 
