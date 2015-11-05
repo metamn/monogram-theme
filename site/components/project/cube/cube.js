@@ -11,29 +11,26 @@ function Init() {
     S=new Scene3D(document.getElementById("Scene1"),1);
   }
 
+  /*
   T = new Tetrahedron(S, "#0080ff", "#0000ff", "#000000", 1);
-  T.Shift(1,1,1);
   T.SetId(0);
 
 
-  O=new Octahedron(S, "#0080ff", "#0000ff", "#000000", 1);
+  O = new Octahedron(S, "#0080ff", "#0000ff", "#000000", 1);
   O.Zoom(1.4);
-  O.Shift(-1,1,-1);
   O.SetId(1);
 
-  /*
-  C=new Cube(S, "#0080ff", "#0000ff", "#000000", 1);
+  C = new Cube(S, "#0080ff", "#0000ff", "#000000", 1);
   C.Zoom(0.9);
-  C.Shift(1,-1,-1);
   C.SetId(2);
 
-  I=new Icosahedron(S, "#0080ff", "#0000ff", "#000000", 1);
-  I.Shift(-1,-1,1);
+  I = new Icosahedron(S, "#0080ff", "#0000ff", "#000000", 1);
   I.SetId(3);
+  */
 
   D=new Dodecahedron(S, "#0080ff", "#0000ff", "#000000", 1);
   D.SetId(4);
-  */
+  
 
   S.AutoCenter();
   S.Center.Zoom(0.0);
