@@ -7,7 +7,7 @@
   "javascripts": {
     "footer": [
       {
-        "file": "svgml3d.js"
+        "file": "svgvml3d.js"
       },
       {
         "file": "platonic.js"
