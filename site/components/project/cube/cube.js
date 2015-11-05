@@ -1,7 +1,7 @@
 var S, T, O, C, I, D;
 var x = 0;
 var y = 0;
-var direction = 0;
+var rotationDirection = 0;
 
 function Init() {
   if (! SVGObjects[0]) {
@@ -35,38 +35,70 @@ function Init() {
   S.ChangeViewer(-15, 0);
   S.Sort();
   S.Draw();
-  Rotate();
+  //Rotate();
 }
 
-function Rotate() {
-  random = Math.floor(Math.random() * 4);
+function cubeRotate() {
+  if (typeof D != "undefined") { D.RotateZ(10,1); }
 
-  switch (direction) {
+  switch (rotationDirection) {
     case 0:
-      x += 5 * random;
+      // left
+      y -= 10;
+      S.ChangeViewer(0, y);
       break;
     case 1:
-      x -= 5 * random;
+      // right
+      y += 10;
+      S.ChangeViewer(0, y);
       break;
     case 2:
-      y += 5 * random;
+      // up
+      x += 5;
+      S.ChangeViewer(x, 0);
       break;
     case 3:
-      y -= 5 * random;
+      // down
+      x -= 5;
+      S.ChangeViewer(x, 0);
       break;
   }
+  console.log('d:' + rotationDirection + ' x:' + x + ' y:' + y);
 
-  console.log('d:' + direction + ' x:' + x + ' y:' + y);
-
-  direction = random;
-
-  if (typeof D != "undefined") { D.RotateZ(10,1); }
-  S.ChangeViewer(x, y);
   S.Sort();
   S.Draw();
-  setTimeout("Rotate()", 200);
 }
 
+
+// Rotate the cube on keypress
+// - it disables the automatic rotation
+document.addEventListener('keydown', function(e) {
+  switch(e.keyCode) {
+    case 37: // left
+      rotationDirection = 0;
+      cubeRotate();
+      break;
+    case 38: // up
+      rotationDirection = 2;
+      cubeRotate();
+      break;
+    case 39: // right
+      rotationDirection = 1;
+      cubeRotate();
+      break;
+    case 40: // down
+      rotationDirection = 3;
+      cubeRotate();
+      break;
+    case 32: // space
+      // stop the rotation
+      break;
+    case 27: // escape
+      // restart the rotation
+    break;
+  };
+
+}, false);
 
 
 Init();

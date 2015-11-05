@@ -138,10 +138,14 @@ function _Scene3DInit()
 }
 function _Scene3DChangeViewer(ddTh, ddFi)
 { var pi_d_180=3.14159265/180;
-  if ((this.Th+ddTh>=-89.0)&&(this.Th+ddTh<=89.0)) this.Th+=ddTh;
+  //if ((this.Th+ddTh>=-89.0)&&(this.Th+ddTh<=89.0)) this.Th+=ddTh;
+  this.Th+=ddTh
+  //while (this.Th<0.0) this.Th+=89.0;
+  //while (this.Th>=360.0) this.Th-=89.0;
+
   this.Fi+=ddFi;
-  while (this.Fi<0.0) this.Fi+=360.0;
-  while (this.Fi>=360.0) this.Fi-=360.0;
+  //while (this.Fi<0.0) this.Fi+=360.0;
+  //while (this.Fi>=360.0) this.Fi-=360.0;
   this.sin_Th=Math.sin(this.Th*pi_d_180);
   this.cos_Th=Math.cos(this.Th*pi_d_180);
   this.sin_Fi=Math.sin(this.Fi*pi_d_180);
