@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="OnLoadEvent(evt)">
+  <defs>
+      <pattern id="imgpattern" x="0" y="0" width="1" height="1">
+        <image x="100" y="100" width="48" height="48" xlink:href="http://lorempixel.com/output/animals-q-c-640-480-2.jpg"/>
+      </pattern>
+  </defs>
+
  <g id="Scene"></g>
  <script type="text/ecmascript">
    <![CDATA[
-    function OnLoadEvent(evt) { 
+    function OnLoadEvent(evt) {
       parent.AddSVGObject(evt.target.ownerDocument);
     }
   ]]>

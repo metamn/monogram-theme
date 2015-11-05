@@ -75,7 +75,7 @@ function Scene3D(aParentObj, azIndex, aWidth, aHeight)
   { this.XM=aWidth/2;
     this.YM=aHeight/2;
   }
-  else  
+  else
   { this.XM=parseInt(aParentObj.style.width)/2;
     this.YM=parseInt(aParentObj.style.height)/2;
   }
@@ -117,9 +117,9 @@ function _Scene3DInit()
     this.PolyGroup.setAttribute("y","0");
     this.PolyGroup.setAttribute("width",this.XM*2);
     this.PolyGroup.setAttribute("height",this.YM*2);
-    this.Parent.GetScene().appendChild(this.PolyGroup);  
+    this.Parent.GetScene().appendChild(this.PolyGroup);
   }
-  else  	
+  else
   { this.BoxGroup=this.Document.createElement("v:group");
     with (this.BoxGroup.style)
     { position="absolute"; top=0; left=0; width=parseInt(this.XM*2); height=parseInt(this.YM*2);
@@ -173,13 +173,13 @@ function _Scene3DAddPoly(oo)
   if (useSVG)
   { this.Shape[ii]=this.Parent.GetSVGDoc().createElementNS("http://www.w3.org/2000/svg","path");
     this.Shape[ii].setAttribute("z-index",this.zIndex+ii+3);
-    this.Parent.GetScene().appendChild(this.Shape[ii]);  
+    this.Parent.GetScene().appendChild(this.Shape[ii]);
   }
   else
   { this.Shape[ii] = this.Document.createElement("v:shape");
     with (this.Shape[ii].style)
-    { position="absolute"; left=0; top=0; 
-      width=this.PolyGroup.style.width; 
+    { position="absolute"; left=0; top=0;
+      width=this.PolyGroup.style.width;
       height=this.PolyGroup.style.height;
       zIndex=this.zIndex+ii+3; //reserve 0..2 for bounding box
     }
@@ -284,7 +284,7 @@ function _Scene3DDelete()
   this.Poly.length=0;
   this.PolyRank.length=0;
   this.Shape.length=0;
-  this.Callback.length=0;  
+  this.Callback.length=0;
 }
 function _Scene3DZoomUpdate()
 { var ii, ll=this.Poly.length;
@@ -315,14 +315,14 @@ function _Scene3DGetColor(cc0, cc1, nn, pp)
     bb=parseInt(cc1.substr(5,2),16);
   }
   if (vv<=0)
-  { rr=Math.floor(rr*this.DiffuseLight); 
+  { rr=Math.floor(rr*this.DiffuseLight);
     gg=Math.floor(gg*this.DiffuseLight);
     bb=Math.floor(bb*this.DiffuseLight);
   }
   else
-  { rr=Math.floor(rr*(vv*(1-this.DiffuseLight)+this.DiffuseLight)); 
-    gg=Math.floor(gg*(vv*(1-this.DiffuseLight)+this.DiffuseLight)); 
-    bb=Math.floor(bb*(vv*(1-this.DiffuseLight)+this.DiffuseLight)); 
+  { rr=Math.floor(rr*(vv*(1-this.DiffuseLight)+this.DiffuseLight));
+    gg=Math.floor(gg*(vv*(1-this.DiffuseLight)+this.DiffuseLight));
+    bb=Math.floor(bb*(vv*(1-this.DiffuseLight)+this.DiffuseLight));
   }
   var ss="#";
   ss+=hh.charAt(Math.floor(rr/16))+hh.charAt(rr%16);
@@ -352,7 +352,7 @@ function Poly3D(aParentScene, aFrontColor, aBackColor, aStrokeColor, aStrokeWeig
   this.ZoomUpdate=_Poly3DZoomUpdate;
   this.Id="";
   this.Callback=new Array();
-  this.Parent.AddPoly(this);  
+  this.Parent.AddPoly(this);
 }
 function _Poly3DAddPoint(xx, yy, zz)
 { vv=this.Parent.Zoom;
@@ -422,12 +422,14 @@ function _Poly3DDraw(aShape)
     }
     ss+="z";
     aShape.setAttribute("d", ss);
-    if ((ll>=3)&&(this.FrontColor!="")) 
+    if ((ll>=3)&&(this.FrontColor!=""))
       aShape.setAttribute("fill",this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center));
     else aShape.setAttribute("fill","none");
+    // by cs
+    aShape.setAttribute("fill","url(#imgpattern)");
     if (this.StrokeColor) aShape.setAttribute("stroke",this.StrokeColor);
     else aShape.setAttribute("stroke",this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center));
-    aShape.setAttribute("stroke-width",parseInt(this.StrokeWeight)); 
+    aShape.setAttribute("stroke-width",parseInt(this.StrokeWeight));
     aShape.id=this.Id;
     for (var jj in this.Parent.Callback)
     { aShape.removeEventListener(jj, this.Parent.Callback[jj], false);
@@ -444,10 +446,10 @@ function _Poly3DDraw(aShape)
       vv=this.Parent.ScreenPos(this.Point[ii]);
       ss+=" "+parseInt(vv.x)+","+parseInt(vv.y)+" x e";
       aShape.path=ss;
-      if ((ll>=3)&&(this.FrontColor!="")) 
+      if ((ll>=3)&&(this.FrontColor!=""))
       { aShape.fillcolor=this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center);
         aShape.filled=true;
-      }  
+      }
       else aShape.filled=false;
       if (this.StrokeColor) aShape.strokecolor=this.StrokeColor;
       else aShape.strokecolor=this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center);
@@ -463,7 +465,7 @@ function _Poly3DDraw(aShape)
     { if(this.Callback[jj]) aShape["on"+jj]=this.Callback[jj];
       else aShape["on"+jj]="";
     }
-  } 
+  }
 }
 function _Poly3DZoomUpdate()
 { var ii, ll=this.Point.length, vv=this.Parent.Zoom;
@@ -498,7 +500,7 @@ function _Object3DSetStrokeWeight(aStrokeWeight)
 { for (var ii=0; ii<this.Poly3D.length; ii++) this.Poly3D[ii].StrokeWeight=aStrokeWeight;
 }
 function _Object3DSetVisibility(isVisible)
-{ for (var ii=0; ii<this.Poly3D.length; ii++) 
+{ for (var ii=0; ii<this.Poly3D.length; ii++)
     this.Poly3D[ii].Visibility=((isVisible)&&(isVisible!="hidden")) ? "visible" : "hidden";
 }
 function _Object3DRotateX(aFi,aCenter)
@@ -571,7 +573,7 @@ function Box3D(aParentScene, aX0,aY0,aZ0, aX1,aY1,aZ1, aFrontColor, aBackColor, 
   this.SetStrokeWeight=_Object3DSetStrokeWeight;
   this.SetVisibility=_Object3DSetVisibility;
   this.RotateX=_Object3DRotateX;
-  this.RotateY=_Object3DRotateY;    
+  this.RotateY=_Object3DRotateY;
   this.RotateZ=_Object3DRotateZ;
   this.SetPosition=_Box3DSetPosition;
   this.SetId=_Object3DSetId;
@@ -657,7 +659,7 @@ function CoordSys(aParentScene, aStrokeColor)
   with (this.Poly3D[0])
   { AddPoint(0,0,0); AddPoint(1,0,0); AddPoint(0,1,0); AddPoint(0,0,1); Update(); }
   if (aStrokeColor=="") this.SetVisibility(false);
-  //This is a helper class to track the coordinates of an object 
+  //This is a helper class to track the coordinates of an object
   //after several rotation, shift and zoom operations
 }
 function _CoordSysTransformCoord(vv)
