@@ -1,8 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="OnLoadEvent(evt)">
   <defs>
-      <pattern id="imgpattern" x="0" y="0" width="1" height="1">
-        <image x="10" y="100" width="48" height="48" xlink:href="http://lorempixel.com/output/animals-q-c-640-480-2.jpg"/>
-      </pattern>
+    <symbol id="icon-facebook-official" viewBox="0 0 878 1024">
+      <title>facebook-official</title>
+      <path class="path1" d="M829.143 73.143q20 0 34.286 14.286t14.286 34.286v780.571q0 20-14.286 34.286t-34.286 14.286h-223.429v-340h113.714l17.143-132.571h-130.857v-84.571q0-32 13.429-48t52.286-16l69.714-0.571v-118.286q-36-5.143-101.714-5.143-77.714 0-124.286 45.714t-46.571 129.143v97.714h-114.286v132.571h114.286v340h-420q-20 0-34.286-14.286t-14.286-34.286v-780.571q0-20 14.286-34.286t34.286-14.286h780.571z"></path>
+    </symbol>
+
+    <pattern id="imgpattern" x="0" y="0" width="1" height="1">
+      <use xlink:href="#icon-facebook-official" x="50" y="50" width="64" height="64"/>
+    </pattern>
   </defs>
 
  <g id="Scene"></g>
