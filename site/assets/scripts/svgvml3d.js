@@ -177,6 +177,9 @@ function _Scene3DAddPoly(oo)
   if (useSVG)
   { this.Shape[ii]=this.Parent.GetSVGDoc().createElementNS("http://www.w3.org/2000/svg","path");
     this.Shape[ii].setAttribute("z-index",this.zIndex+ii+3);
+    // by cs
+    iii = ii + 1;
+    this.Shape[ii].setAttribute("fill","url(#imgpattern" + iii + ")");
     this.Parent.GetScene().appendChild(this.Shape[ii]);
   }
   else
@@ -428,9 +431,10 @@ function _Poly3DDraw(aShape)
     aShape.setAttribute("d", ss);
     if ((ll>=3)&&(this.FrontColor!=""))
       aShape.setAttribute("fill",this.Parent.GetColor(this.FrontColor, this.BackColor, this.Normal, this.Center));
-    else aShape.setAttribute("fill","none");
+    // else aShape.setAttribute("fill","none");
     // by cs
-    aShape.setAttribute("fill","url(#imgpattern)");
+    //zIndex = aShape.getAttribute("z-index");
+    //aShape.setAttribute("fill","url(#imgpattern" + zIndex - 2 + ")");
 
 
     if (this.StrokeColor) aShape.setAttribute("stroke",this.StrokeColor);
