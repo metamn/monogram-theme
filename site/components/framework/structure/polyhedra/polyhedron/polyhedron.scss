@@ -22,6 +22,10 @@
   &__triangle {
     @include polyhedron__triangle;
   }
+
+  &--tetrahedron {
+    @include polyhedron--tetrahedron;
+  }
 }
 
 @keyframes polyhedron-rotate {
