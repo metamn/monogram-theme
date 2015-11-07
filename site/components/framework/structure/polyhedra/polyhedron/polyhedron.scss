@@ -46,6 +46,10 @@
   &--dodecahedron {
     @include polyhedron--dodecahedron;
   }
+
+  &--icosahedron {
+    @include polyhedron--icosahedron;
+  }
 }
 
 @keyframes polyhedron-rotate {

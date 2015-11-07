@@ -74,6 +74,16 @@
       "name": "angellist",
       "title": "Angel List",
       "url": "http://angel.co"
+    },
+    {
+      "name": "google-plus",
+      "title": "Google Plus",
+      "url": "http://plus.google.com"
+    },
+    {
+      "name": "skype",
+      "title": "Skype",
+      "url": "http://skype.com"
     }
   ],
   "iconsall": [
