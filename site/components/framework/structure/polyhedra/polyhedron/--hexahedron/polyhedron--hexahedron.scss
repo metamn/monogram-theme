@@ -1,0 +1,30 @@
+@mixin polyhedron--hexahedron {
+  width: 100px;
+  height: 100px;
+
+  .polyhedron__face {
+    transform-origin: 50% 50% 0;
+  }
+  .polyhedron__face:nth-child(1) {
+  	transform: translateZ(50px);
+  }
+  .polyhedron__face:nth-child(2) {
+    transform: translateZ(-50px) rotateX(180deg);
+  }
+  .polyhedron__face:nth-child(3) {
+    transform-origin: 0 50%;
+    transform: translateZ(50px) rotateY(90deg);
+  }
+  .polyhedron__face:nth-child(4) {
+  	transform-origin: 100% 50%;
+    transform: translateZ(50px) rotateY(-90deg);
+  }
+  .polyhedron__face:nth-child(5) {
+  	transform-origin: 50% 0;
+    transform: translateZ(50px) rotateX(-90deg);
+  }
+  .polyhedron__face:nth-child(6) {
+  	transform-origin: 50% 100%;
+    transform: translateZ(50px) rotateX(90deg);
+  }
+}

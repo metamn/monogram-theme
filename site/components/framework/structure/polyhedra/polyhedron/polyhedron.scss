@@ -23,8 +23,16 @@
     @include polyhedron__triangle;
   }
 
+  &__square {
+    @include polyhedron__square;
+  }
+
   &--tetrahedron {
     @include polyhedron--tetrahedron;
+  }
+
+  &--hexahedron {
+    @include polyhedron--hexahedron;
   }
 }
 
