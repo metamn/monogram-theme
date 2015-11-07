@@ -14,7 +14,165 @@
       "name": "David Hannemaier Hanson"
     }
   ],
-  "icons": [
+  "iconstetra": [
+    {
+      "name": "envelope",
+      "title": "Email",
+      "url": "mailto:"
+    },
+    {
+      "name": "github",
+      "title": "Github",
+      "url": "http://github.com"
+    },
+    {
+      "name": "twitter",
+      "title": "Twitter",
+      "url": "http://twitter.com"
+    },
+    {
+      "name": "medium",
+      "title": "Medium",
+      "url": "http://medium.com"
+    }
+  ],
+  "iconshexa": [
+    {
+      "name": "envelope",
+      "title": "Email",
+      "url": "mailto:"
+    },
+    {
+      "name": "github",
+      "title": "Github",
+      "url": "http://github.com"
+    },
+    {
+      "name": "twitter",
+      "title": "Twitter",
+      "url": "http://twitter.com"
+    },
+    {
+      "name": "medium",
+      "title": "Medium",
+      "url": "http://medium.com"
+    },
+    {
+      "name": "instagram",
+      "title": "Instagram",
+      "url": "http://instagram.com"
+    },
+    {
+      "name": "facebook-official",
+      "title": "Facebook",
+      "url": "http://facebook.com"
+    }
+  ],
+  "iconsocta": [
+    {
+      "name": "envelope",
+      "title": "Email",
+      "url": "mailto:"
+    },
+    {
+      "name": "github",
+      "title": "Github",
+      "url": "http://github.com"
+    },
+    {
+      "name": "twitter",
+      "title": "Twitter",
+      "url": "http://twitter.com"
+    },
+    {
+      "name": "medium",
+      "title": "Medium",
+      "url": "http://medium.com"
+    },
+    {
+      "name": "instagram",
+      "title": "Instagram",
+      "url": "http://instagram.com"
+    },
+    {
+      "name": "facebook-official",
+      "title": "Facebook",
+      "url": "http://facebook.com"
+    },
+    {
+      "name": "lanyrd",
+      "title": "Lanyrd",
+      "url": "http://lanyrd.com"
+    },
+    {
+      "name": "linkedin",
+      "title": "Linkedin",
+      "url": "http://linkedin.com"
+    }
+  ],
+  "iconsdodeca": [
+    {
+      "name": "envelope",
+      "title": "Email",
+      "url": "mailto:"
+    },
+    {
+      "name": "github",
+      "title": "Github",
+      "url": "http://github.com"
+    },
+    {
+      "name": "twitter",
+      "title": "Twitter",
+      "url": "http://twitter.com"
+    },
+    {
+      "name": "medium",
+      "title": "Medium",
+      "url": "http://medium.com"
+    },
+    {
+      "name": "instagram",
+      "title": "Instagram",
+      "url": "http://instagram.com"
+    },
+    {
+      "name": "facebook-official",
+      "title": "Facebook",
+      "url": "http://facebook.com"
+    },
+    {
+      "name": "lanyrd",
+      "title": "Lanyrd",
+      "url": "http://lanyrd.com"
+    },
+    {
+      "name": "linkedin",
+      "title": "Linkedin",
+      "url": "http://linkedin.com"
+    },
+    {
+      "name": "codepen",
+      "title": "Codepen",
+      "url": "http://codepen.io"
+    },
+    {
+      "name": "dribbble",
+      "title": "Dribbble",
+      "url": "http://dribbble.com"
+    },
+    {
+      "name": "flickr",
+      "title": "Flickr",
+      "url": "http://flickr.com"
+    },
+    {
+      "name": "angellist",
+      "title": "Angel List",
+      "url": "http://angel.co"
+    }
+  ],
+  "iconsicosa": [
     {
       "name": "envelope",
       "title": "Email",
