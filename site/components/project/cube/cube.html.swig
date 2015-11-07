@@ -8,7 +8,4 @@
       {% include '../../framework/structure/icomoon/icomoon.html.swig' %}
     {% endfor %}
   </div>
-
-  {# must be named Scene1 !! #}
-  <embed class="cube__scene" width='300' height='300' name='Scene1' src="{{ site.url }}{{ site.images }}scene.svg" wmode='transparent' type='image/svg+xml' />
 </section>
