@@ -1,0 +1,127 @@
+@mixin polyhedron__pentagon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 0;
+  transform-origin: 50% 100%;
+
+  &:before {
+    content: '';
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,0,0,0.2);
+  }
+
+  &:after {
+    content: '';
+    border: 81px solid transparent;
+    border-top: 0;
+    border-bottom: 59px solid rgba(0,255,0,0.2);
+    position: absolute;
+    bottom: 95px;
+    left: -31px;
+  }
+
+  span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 0;
+
+    &:before {
+      content: '';
+      border-left: 31px solid transparent;
+      border-top: 95px solid rgba(0,0,255,0.2);
+      position: absolute;
+      bottom: 0px;
+      left: -31px;
+    }
+
+    &:after {
+      content: '';
+      border-right: 31px solid transparent;
+      border-top: 95px solid rgba(0,0,255,0.2);
+      position: absolute;
+      bottom: 0px;
+      right: -31px;
+    }
+  }
+
+
+  &:nth-child(6n):before {
+    background-color: rgba(255,0,0,0.2);
+  }
+  &:nth-child(6n):after {
+  	border-bottom-color: rgba(255,0,0,0.2);
+  }
+  &:nth-child(6n) span:before,
+  &:nth-child(6n) span:after {
+  	border-top-color: rgba(255,0,0,0.2);
+  }
+  &:nth-child(6n+1):before {
+    background-color: rgba(0,255,0,0.2);
+  }
+  &:nth-child(6n+1):after {
+  	border-bottom-color: rgba(0,255,0,0.2);
+  }
+  &:nth-child(6n+1) span:before,
+  &:nth-child(6n+1) span:after {
+  	border-top-color: rgba(0,255,0,0.2);
+  }
+  &:nth-child(6n+2):before {
+    background-color: rgba(0,0,255,0.2);
+  }
+  &:nth-child(6n+2):after {
+  	border-bottom-color: rgba(0,0,255,0.2);
+  }
+  &:nth-child(6n+2) span:before,
+  &:nth-child(6n+2) span:after {
+  	border-top-color: rgba(0,0,255,0.2);
+  }
+  &:nth-child(6n+3):before {
+    background-color: rgba(255,255,0,0.2);
+  }
+  &:nth-child(6n+3):after {
+  	border-bottom-color: rgba(255,255,0,0.2);
+  }
+  &:nth-child(6n+3) span:before,
+  &:nth-child(6n+3) span:after {
+  	border-top-color: rgba(255,255,0,0.2);
+  }
+  &:nth-child(6n+4):before {
+    background-color: rgba(255,0,255,0.2);
+  }
+  &:nth-child(6n+4):after {
+  	border-bottom-color: rgba(255,0,255,0.2);
+  }
+  &:nth-child(6n+4) span:before,
+  &:nth-child(6n+4) span:after {
+  	border-top-color: rgba(255,0,255,0.2);
+  }
+  &:nth-child(6n+5):before {
+    background-color: rgba(0,255,255,0.2);
+  }
+  &:nth-child(6n+5):after {
+  	border-bottom-color: rgba(0,255,255,0.2);
+  }
+  &:nth-child(6n+5) span:before,
+  &:nth-child(6n+5) span:after {
+  	border-top-color: rgba(0,255,255,0.2);
+  }
+}

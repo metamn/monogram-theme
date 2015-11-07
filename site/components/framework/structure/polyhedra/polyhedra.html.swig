@@ -7,6 +7,8 @@
     {% include 'polyhedron/--hexahedron/polyhedron--hexahedron.html.swig' %}
   {% elseif polyhedra.length <= 8 %}
     {% include 'polyhedron/--octahedron/polyhedron--octahedron.html.swig' %}
+  {% elseif polyhedra.length <= 12 %}
+    {% include 'polyhedron/--dodecahedron/polyhedron--dodecahedron.html.swig' %}
   {% endif %}
 
 </aside>

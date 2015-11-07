@@ -27,6 +27,10 @@
     @include polyhedron__square;
   }
 
+  &__pentagon {
+    @include polyhedron__pentagon;
+  }
+
   &--tetrahedron {
     @include polyhedron--tetrahedron;
   }
@@ -37,6 +41,10 @@
 
   &--octahedron {
     @include polyhedron--octahedron;
+  }
+
+  &--dodecahedron {
+    @include polyhedron--dodecahedron;
   }
 }
 

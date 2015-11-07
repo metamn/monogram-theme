@@ -54,6 +54,26 @@
       "name": "linkedin",
       "title": "Linkedin",
       "url": "http://linkedin.com"
+    },
+    {
+      "name": "codepen",
+      "title": "Codepen",
+      "url": "http://codepen.io"
+    },
+    {
+      "name": "dribbble",
+      "title": "Dribbble",
+      "url": "http://dribbble.com"
+    },
+    {
+      "name": "flickr",
+      "title": "Flickr",
+      "url": "http://flickr.com"
+    },
+    {
+      "name": "angellist",
+      "title": "Angel List",
+      "url": "http://angel.co"
     }
   ],
   "iconsall": [
