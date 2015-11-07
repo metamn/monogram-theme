@@ -11,8 +11,8 @@ html {
         @include monogram(30vh, 30vh, 0);
       }
 
-      .cube {
-        @include cube;
+      .icons {
+        @include icons;
       }
     }
   }

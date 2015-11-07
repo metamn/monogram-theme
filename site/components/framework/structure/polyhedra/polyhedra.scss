@@ -1,0 +1,9 @@
+@mixin polyhedra {
+  height: 350px;
+  overflow: hidden;
+  text-align: center;
+
+  .polyhedron {
+    @include polyhedron;
+  }
+}

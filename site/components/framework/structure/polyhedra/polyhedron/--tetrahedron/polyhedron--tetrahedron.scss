@@ -1,0 +1,14 @@
+@mixin polyhedron--tetrahedron {
+  width: 100px;
+  height: 100px;
+
+  .polyhedron__face:nth-child(2) {
+    transform: translate(-25px, -44px) rotate(-60deg) rotateX(110deg);
+  }
+  .polyhedron__:nth-child(3) {
+    transform: translate(25px, -44px) rotate(60deg) rotateX(110deg);
+  }
+  .polyhedron__:nth-child(4) {
+    transform: rotate(180deg) rotateX(110deg);
+  }
+}

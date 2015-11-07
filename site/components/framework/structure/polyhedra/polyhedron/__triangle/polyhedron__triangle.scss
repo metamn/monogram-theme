@@ -1,0 +1,45 @@
+@mixin polyhedron__triangle {
+  position: absolute;
+	width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: 50% 100%;
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: transparent;
+    border: 50px solid transparent;
+    border-top: 0;
+    border-bottom-width: 87px;
+  }
+
+  &:nth-child(6n):before {
+    border-bottom-color: rgba(255,0,0,0.2);
+  }
+  &:nth-child(6n+1):before {
+    border-bottom-color: rgba(0,255,0,0.2);
+  }
+  &:nth-child(6n+2):before {
+    border-bottom-color: rgba(0,0,255,0.2);
+  }
+  &:nth-child(6n+3):before {
+    border-bottom-color: rgba(255,255,0,0.2);
+  }
+  &:nth-child(6n+4):before {
+    border-bottom-color: rgba(255,0,255,0.2);
+  }
+  &:nth-child(6n+5):before {
+    border-bottom-color: rgba(0,255,255,0.2);
+  }
+}
