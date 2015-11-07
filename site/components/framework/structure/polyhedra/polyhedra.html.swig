@@ -5,6 +5,8 @@
     {% include 'polyhedron/--tetrahedron/polyhedron--tetrahedron.html.swig' %}
   {% elseif polyhedra.length <= 6 %}
     {% include 'polyhedron/--hexahedron/polyhedron--hexahedron.html.swig' %}
+  {% elseif polyhedra.length <= 8 %}
+    {% include 'polyhedron/--octahedron/polyhedron--octahedron.html.swig' %}
   {% endif %}
 
 </aside>

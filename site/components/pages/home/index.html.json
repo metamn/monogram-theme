@@ -44,6 +44,16 @@
       "name": "facebook-official",
       "title": "Facebook",
       "url": "http://facebook.com"
+    },
+    {
+      "name": "lanyrd",
+      "title": "Lanyrd",
+      "url": "http://lanyrd.com"
+    },
+    {
+      "name": "linkedin",
+      "title": "Linkedin",
+      "url": "http://linkedin.com"
     }
   ],
   "iconsall": [
