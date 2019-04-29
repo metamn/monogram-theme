@@ -1,7 +1,13 @@
 // Generate a multidimensional background gradient using a palette
 // - the palette has $nr-of-colors composed by lighten variations of color $start towards color $stop
 // - the colors have a random width adjusted by $granularity (0.00 - 1.00)
-@mixin background-gradient__palette($nr-of-colors, $start, $stop, $nr-of-columns, $granularity) {
+@mixin background-gradient__palette(
+  $nr-of-colors,
+  $start,
+  $stop,
+  $nr-of-columns,
+  $granularity
+) {
   // The palette
   $palette: color-palette($nr-of-colors, $start, $stop);
 
@@ -15,8 +21,12 @@
   // Color stops
   $color-stops: ();
   @for $i from 1 to $nr-of-columns {
-    $color-stops: append($color-stops, gradient-stops($nr-of-colors, none, $granularity));
+    $color-stops: append(
+      $color-stops,
+      gradient-stops($nr-of-colors, none, $granularity)
+    );
   }
 
-  @include background-gradient($color-columns, $color-stops);
+  //@include background-gradient($color-columns, $color-stops);
+  @include background-gradient2;
 }
