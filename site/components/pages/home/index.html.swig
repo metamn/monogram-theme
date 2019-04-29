@@ -6,6 +6,6 @@
   {% set name = avatar.name %}
   {% include '../../project/monogram/monogram.html.swig' %}
 
-  {% set icons = iconstetra %}
+  {% set icons = iconshexa %}
   {% include '../../project/icons/icons.html.swig' %}
 {% endblock %}
