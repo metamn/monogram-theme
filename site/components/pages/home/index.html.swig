@@ -1,4 +1,4 @@
-{% set avatar = avatars[0] %}
+{% set avatar = avatars[3] %}
 
 {% extends '../../project/templates/default/default.html.swig' %}
 {% block content %}
