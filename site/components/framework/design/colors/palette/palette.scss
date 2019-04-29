@@ -14,7 +14,6 @@
   @return $return;
 }
 
-
 // Generate random steps for a color palette to be used as a background gradient
 // - metric can be px, vw, % or em
 // - if no metric given a random one will be chosen
@@ -40,7 +39,6 @@
   @return $return;
 }
 
-
 // Random sizes for a color palette
 @function random-sizes($metric) {
   @if ($metric == 1px) {
@@ -59,7 +57,6 @@
 
   @return $rnd;
 }
-
 
 // Randomize a list
 // - returns a list
