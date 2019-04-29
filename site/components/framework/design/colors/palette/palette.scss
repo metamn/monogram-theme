@@ -19,11 +19,11 @@
 // - if no metric given a random one will be chosen
 // - $granularity multiplies the size, ie making it much bigger or much smaller
 @function gradient-stops($nr-of-stops, $metric: none, $granularity: 1) {
+  $units: 1px, 1vw, 1vh, 1rem, 1em, 1%;
+  $metric: nth($units, random(length($units)));
+  $rnd: random-sizes($metric);
+
   @if ($metric != none) {
-    $rnd: random-sizes($metric);
-  } @else {
-    $units: 1px, 1vw, 1vh, 1rem, 1em, 1%;
-    $metric: nth($units, random(length($units)));
     $rnd: random-sizes($metric);
   }
 
@@ -41,6 +41,7 @@
 
 // Random sizes for a color palette
 @function random-sizes($metric) {
+  $rnd: 50;
   @if ($metric == 1px) {
     $rnd: 100;
   } @else if ($metric == 1%) {
